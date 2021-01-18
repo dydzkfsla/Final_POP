@@ -6,13 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace POPDisplay.MainForm
+namespace POPDisplay.BaseForm
 {
-    public partial class ProcessListForm : POPDisplay.BaseForm.SearchForm
+    public partial class ShowList : POPDisplay.BaseForm.BaseForm
     {
-        public ProcessListForm()
+        public ShowList()
         {
             InitializeComponent();
+        }
+
+        private void ShowList_Load(object sender, EventArgs e)
+        {
+            //dataGridView1.
         }
     }
 }

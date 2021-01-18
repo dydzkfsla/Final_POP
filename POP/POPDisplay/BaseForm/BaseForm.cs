@@ -101,6 +101,20 @@ namespace POPDisplay.BaseForm
         }
 
         #endregion
-        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_Time.Text = DateTime.Now.ToString("yyyy-MM-dd\nHH : mm : ss");
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void BaseForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
+        }
     }
 }

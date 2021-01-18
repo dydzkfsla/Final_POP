@@ -41,13 +41,13 @@ namespace POPDisplay.BaseForm
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.gb_SearchSimple = new System.Windows.Forms.GroupBox();
             this.pnl_Sort = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rbn_Desc = new POPDisplay.ControlUser.RadioBtn();
             this.rbn_Asc = new POPDisplay.ControlUser.RadioBtn();
             this.pic_SortBtn = new System.Windows.Forms.PictureBox();
             this.gb_SearchDetail = new System.Windows.Forms.GroupBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.gb_Search = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnl_All.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).BeginInit();
@@ -62,7 +62,7 @@ namespace POPDisplay.BaseForm
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(125, 31);
+            this.label1.Size = new System.Drawing.Size(295, 74);
             this.label1.Text = "ShowList";
             // 
             // pnl_All
@@ -81,15 +81,15 @@ namespace POPDisplay.BaseForm
             // 
             // pic_CancleBtn
             // 
-            this.pic_CancleBtn.Location = new System.Drawing.Point(1774, -1);
+            this.pic_CancleBtn.Location = new System.Drawing.Point(1741, 9);
             // 
             // pic_MaxSizeBtn
             // 
-            this.pic_MaxSizeBtn.Location = new System.Drawing.Point(1721, -1);
+            this.pic_MaxSizeBtn.Location = new System.Drawing.Point(1688, 9);
             // 
             // pic_MinSizeBtn
             // 
-            this.pic_MinSizeBtn.Location = new System.Drawing.Point(1667, -1);
+            this.pic_MinSizeBtn.Location = new System.Drawing.Point(1634, 9);
             // 
             // imgList
             // 
@@ -220,6 +220,15 @@ namespace POPDisplay.BaseForm
             this.pnl_Sort.Size = new System.Drawing.Size(260, 100);
             this.pnl_Sort.TabIndex = 4;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(17, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(157, 25);
+            this.comboBox1.TabIndex = 6;
+            // 
             // rbn_Desc
             // 
             this.rbn_Desc.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -285,15 +294,6 @@ namespace POPDisplay.BaseForm
             this.gb_Search.TabIndex = 9;
             this.gb_Search.TabStop = false;
             this.gb_Search.Text = "검색조건";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 25);
-            this.comboBox1.TabIndex = 6;
             // 
             // ShowListForm
             // 

@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace POPDisplay.MainForm
 {
-    public partial class WareHouseListForm : POPDisplay.BaseForm.ShowItemInfo
+    public partial class WareHouseList : POPDisplay.BaseForm.BaseForm
     {
-        public WareHouseListForm()
+        public WareHouseList()
         {
             InitializeComponent();
         }

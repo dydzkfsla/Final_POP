@@ -75,6 +75,12 @@
     <Compile Include="BaseForm\ShowItemInfo.Designer.cs">
       <DependentUpon>ShowItemInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseForm\ShowList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\ShowList.Designer.cs">
+      <DependentUpon>ShowList.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm\ShowListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,23 +111,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\LogIn.cs">
+    <Compile Include="MainForm\ProcessInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\LogIn.Designer.cs">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <Compile Include="MainForm\ProcessInfoForm.Designer.cs">
+      <DependentUpon>ProcessInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\ProcessListForm.cs">
+    <Compile Include="MainForm\WareHouseList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\ProcessListForm.Designer.cs">
-      <DependentUpon>ProcessListForm.cs</DependentUpon>
+    <Compile Include="MainForm\WareHouseList.Designer.cs">
+      <DependentUpon>WareHouseList.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\WareHouseListForm.cs">
+    <Compile Include="MainForm\WorkOrderList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\WareHouseListForm.Designer.cs">
-      <DependentUpon>WareHouseListForm.cs</DependentUpon>
+    <Compile Include="MainForm\WorkOrderList.Designer.cs">
+      <DependentUpon>WorkOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POPBase\POPBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POPBase\POPBaseForm.Designer.cs">
+      <DependentUpon>POPBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\NoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\NoteForm.Designer.cs">
+      <DependentUpon>NoteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +157,9 @@
     <EmbeddedResource Include="BaseForm\ShowItemInfo.resx">
       <DependentUpon>ShowItemInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\ShowList.resx">
+      <DependentUpon>ShowList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\ShowListForm.resx">
       <DependentUpon>ShowListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,14 +172,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\ProcessInfoForm.resx">
+      <DependentUpon>ProcessInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\ProcessListForm.resx">
-      <DependentUpon>ProcessListForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\WareHouseList.resx">
+      <DependentUpon>WareHouseList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\WareHouseListForm.resx">
-      <DependentUpon>WareHouseListForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\WorkOrderList.resx">
+      <DependentUpon>WorkOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POPBase\POPBaseForm.resx">
+      <DependentUpon>POPBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\NoteForm.resx">
+      <DependentUpon>NoteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,7 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ControlCustom\" />
-    <Folder Include="PopUp\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cancel_32x32.png" />
@@ -260,6 +286,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pistol-596564_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cowboy-2028626_1280.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
