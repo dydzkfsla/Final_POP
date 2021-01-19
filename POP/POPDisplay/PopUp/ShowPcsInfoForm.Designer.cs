@@ -140,7 +140,7 @@ namespace POPDisplay.PopUp
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 34);
             this.label3.TabIndex = 28;
-            this.label3.Text = "불량률";
+            this.label3.Text = "양품수";
             // 
             // textBox3
             // 
@@ -207,10 +207,11 @@ namespace POPDisplay.PopUp
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(36, 396);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(402, 25);
+            this.comboBox1.Size = new System.Drawing.Size(402, 82);
             this.comboBox1.TabIndex = 35;
             // 
             // label8
@@ -226,10 +227,11 @@ namespace POPDisplay.PopUp
             // 
             // comboBox2
             // 
+            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(36, 560);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(402, 25);
+            this.comboBox2.Size = new System.Drawing.Size(402, 82);
             this.comboBox2.TabIndex = 38;
             // 
             // ShowPcsInfoForm

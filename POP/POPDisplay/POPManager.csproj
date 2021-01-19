@@ -57,24 +57,6 @@
     <Compile Include="BaseForm\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm\SearchForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\SearchForm.Designer.cs">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseForm\ShowDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\ShowDetail.Designer.cs">
-      <DependentUpon>ShowDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseForm\ShowItemInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\ShowItemInfo.Designer.cs">
-      <DependentUpon>ShowItemInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaseForm\ShowList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,12 +68,6 @@
     </Compile>
     <Compile Include="BaseForm\ShowListForm.Designer.cs">
       <DependentUpon>ShowListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlCustom\testCustomControl1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ControlCustom\testCustomControl1.Designer.cs">
-      <DependentUpon>testCustomControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlUser\ProcessInfo.cs">
       <SubType>UserControl</SubType>
@@ -117,17 +93,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\MainMenuForm.cs">
+    <Compile Include="MainForm\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\MainMenuForm.Designer.cs">
-      <DependentUpon>MainMenuForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm\PcsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm\PcsForm.Designer.cs">
-      <DependentUpon>PcsForm.cs</DependentUpon>
+    <Compile Include="MainForm\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm\ProcessForm.cs">
       <SubType>Form</SubType>
@@ -141,12 +111,6 @@
     <Compile Include="MainForm\WareHouseOut.Designer.cs">
       <DependentUpon>WareHouseOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\WareHouseManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm\WareHouseManager.Designer.cs">
-      <DependentUpon>WareHouseManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm\WorkOrderList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,11 +123,11 @@
     <Compile Include="POPuPBase\POPBaseForm.Designer.cs">
       <DependentUpon>POPBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopUp\NewPcsSetForm.cs">
+    <Compile Include="PopUp\LabelInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopUp\NewPcsSetForm.Designer.cs">
-      <DependentUpon>NewPcsSetForm.cs</DependentUpon>
+    <Compile Include="PopUp\LabelInfo.Designer.cs">
+      <DependentUpon>LabelInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="PopUp\NoteForm.cs">
       <SubType>Form</SubType>
@@ -196,15 +160,6 @@
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\SearchForm.resx">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\ShowDetail.resx">
-      <DependentUpon>ShowDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\ShowItemInfo.resx">
-      <DependentUpon>ShowItemInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\ShowList.resx">
       <DependentUpon>ShowList.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,8 +175,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\PcsForm.resx">
-      <DependentUpon>PcsForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\ProcessForm.resx">
       <DependentUpon>ProcessForm.cs</DependentUpon>
@@ -229,17 +184,14 @@
     <EmbeddedResource Include="MainForm\WareHouseOut.resx">
       <DependentUpon>WareHouseOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\WareHouseManager.resx">
-      <DependentUpon>WareHouseManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\WorkOrderList.resx">
       <DependentUpon>WorkOrderList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POPuPBase\POPBaseForm.resx">
       <DependentUpon>POPBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopUp\NewPcsSetForm.resx">
-      <DependentUpon>NewPcsSetForm.cs</DependentUpon>
+    <EmbeddedResource Include="PopUp\LabelInfo.resx">
+      <DependentUpon>LabelInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp\NoteForm.resx">
       <DependentUpon>NoteForm.cs</DependentUpon>
@@ -277,7 +229,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ControlCustom\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cancel_32x32.png" />
   </ItemGroup>

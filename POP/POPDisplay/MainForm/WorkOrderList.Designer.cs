@@ -42,7 +42,6 @@ namespace POPDisplay.MainForm
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@ namespace POPDisplay.MainForm
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
             this.pnl_All.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).BeginInit();
@@ -72,6 +72,7 @@ namespace POPDisplay.MainForm
             this.pnl_All.Controls.Add(this.button1);
             this.pnl_All.Controls.Add(this.button3);
             this.pnl_All.Controls.Add(this.dataGridView1);
+            this.pnl_All.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pnl_All.Size = new System.Drawing.Size(2348, 1046);
             // 
             // label6
@@ -221,17 +222,6 @@ namespace POPDisplay.MainForm
             this.dataGridView1.Size = new System.Drawing.Size(2348, 611);
             this.dataGridView1.TabIndex = 25;
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(1995, 772);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(238, 129);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "비고등록";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // Column2
             // 
             this.Column2.HeaderText = "생산물품";
@@ -273,6 +263,17 @@ namespace POPDisplay.MainForm
             this.Column8.HeaderText = "완료일";
             this.Column8.Name = "Column8";
             this.Column8.Width = 200;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Location = new System.Drawing.Point(1995, 772);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(238, 129);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "비고등록";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // WorkOrderList
             // 

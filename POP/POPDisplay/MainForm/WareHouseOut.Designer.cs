@@ -377,9 +377,10 @@ namespace POPDisplay.MainForm
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label8);
+            this.panel1.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1613, 1005);
+            this.panel1.Size = new System.Drawing.Size(1603, 1005);
             this.panel1.TabIndex = 26;
             // 
             // button8

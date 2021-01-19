@@ -41,6 +41,9 @@ namespace POPDisplay.MainForm
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pnl_All.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).BeginInit();
@@ -55,6 +58,9 @@ namespace POPDisplay.MainForm
             // 
             // pnl_All
             // 
+            this.pnl_All.Controls.Add(this.comboBox2);
+            this.pnl_All.Controls.Add(this.label2);
+            this.pnl_All.Controls.Add(this.comboBox1);
             this.pnl_All.Controls.Add(this.button8);
             this.pnl_All.Controls.Add(this.button7);
             this.pnl_All.Controls.Add(this.button6);
@@ -112,9 +118,9 @@ namespace POPDisplay.MainForm
             this.panel1.Controls.Add(this.processInfo1);
             this.panel1.Controls.Add(this.processInfo3);
             this.panel1.Controls.Add(this.processInfo2);
-            this.panel1.Location = new System.Drawing.Point(18, 18);
+            this.panel1.Location = new System.Drawing.Point(18, 91);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2131, 798);
+            this.panel1.Size = new System.Drawing.Size(2131, 725);
             this.panel1.TabIndex = 3;
             // 
             // button3
@@ -205,12 +211,41 @@ namespace POPDisplay.MainForm
             this.button8.Text = "▽";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 27);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(266, 42);
+            this.comboBox1.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(12, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 34);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "공정선택";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(435, 27);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(266, 42);
+            this.comboBox2.TabIndex = 24;
+            // 
             // ProcessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.ClientSize = new System.Drawing.Size(2361, 1171);
             this.Name = "ProcessForm";
             this.pnl_All.ResumeLayout(false);
+            this.pnl_All.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).EndInit();
@@ -234,5 +269,8 @@ namespace POPDisplay.MainForm
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
