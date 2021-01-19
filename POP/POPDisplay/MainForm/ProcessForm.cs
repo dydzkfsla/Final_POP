@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace POPDisplay.PopUp
+namespace POPDisplay.MainForm
 {
-    public partial class NoteForm : POPDisplay.POPUpBase.POPBaseForm
+    public partial class ProcessForm : POPDisplay.BaseForm.BaseForm
     {
-        public NoteForm()
+        public ProcessForm()
         {
             InitializeComponent();
         }

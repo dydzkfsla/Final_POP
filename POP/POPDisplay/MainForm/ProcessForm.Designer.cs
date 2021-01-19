@@ -1,7 +1,7 @@
 ﻿
 namespace POPDisplay.MainForm
 {
-    partial class ProcessInfoForm
+    partial class ProcessForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -51,7 +51,7 @@ namespace POPDisplay.MainForm
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(272, 74);
-            this.label1.Text = "공정현황";
+            this.label1.Text = "설비현황";
             // 
             // pnl_All
             // 
@@ -69,7 +69,7 @@ namespace POPDisplay.MainForm
             // 
             this.processInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.processInfo1.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.processInfo1.FrmBack = System.Drawing.Color.White;
+            this.processInfo1.FrmBack = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.processInfo1.Location = new System.Drawing.Point(15, 20);
             this.processInfo1.Margin = new System.Windows.Forms.Padding(4);
             this.processInfo1.Name = "processInfo1";
@@ -83,7 +83,7 @@ namespace POPDisplay.MainForm
             // 
             this.processInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.processInfo2.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.processInfo2.FrmBack = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.processInfo2.FrmBack = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.processInfo2.Location = new System.Drawing.Point(334, 20);
             this.processInfo2.Margin = new System.Windows.Forms.Padding(4);
             this.processInfo2.Name = "processInfo2";
@@ -97,7 +97,7 @@ namespace POPDisplay.MainForm
             // 
             this.processInfo3.BackColor = System.Drawing.Color.Silver;
             this.processInfo3.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.processInfo3.FrmBack = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.processInfo3.FrmBack = System.Drawing.Color.Silver;
             this.processInfo3.Location = new System.Drawing.Point(653, 20);
             this.processInfo3.Margin = new System.Windows.Forms.Padding(4);
             this.processInfo3.Name = "processInfo3";
@@ -205,11 +205,11 @@ namespace POPDisplay.MainForm
             this.button8.Text = "▽";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // ProcessInfoForm
+            // ProcessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.ClientSize = new System.Drawing.Size(2361, 1171);
-            this.Name = "ProcessInfoForm";
+            this.Name = "ProcessForm";
             this.pnl_All.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).EndInit();

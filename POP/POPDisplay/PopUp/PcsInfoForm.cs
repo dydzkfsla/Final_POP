@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POPDisplay.POPBase
+namespace POPDisplay.PopUp
 {
-    public partial class POPBaseForm : Form
+    public partial class PcsInfoForm : POPDisplay.POPUpBase.POPBaseForm
     {
-        public POPBaseForm()
+        public PcsInfoForm()
         {
             InitializeComponent();
         }

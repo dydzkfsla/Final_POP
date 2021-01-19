@@ -29,6 +29,7 @@ namespace POPDisplay.MainForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@ namespace POPDisplay.MainForm
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +50,6 @@ namespace POPDisplay.MainForm
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
             this.pnl_All.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).BeginInit();
@@ -172,7 +170,7 @@ namespace POPDisplay.MainForm
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(238, 129);
             this.button2.TabIndex = 28;
-            this.button2.Text = "작업마감";
+            this.button2.Text = "작업현황";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -183,7 +181,7 @@ namespace POPDisplay.MainForm
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(238, 129);
             this.button1.TabIndex = 27;
-            this.button1.Text = "작업시작";
+            this.button1.Text = "설비현황";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -199,18 +197,23 @@ namespace POPDisplay.MainForm
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 60;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
             this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10});
+            this.Column8});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -218,10 +221,16 @@ namespace POPDisplay.MainForm
             this.dataGridView1.Size = new System.Drawing.Size(2348, 611);
             this.dataGridView1.TabIndex = 25;
             // 
-            // Column1
+            // button4
             // 
-            this.Column1.HeaderText = "작업코드";
-            this.Column1.Name = "Column1";
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Location = new System.Drawing.Point(1995, 772);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(238, 129);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "비고등록";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Column2
             // 
@@ -265,29 +274,6 @@ namespace POPDisplay.MainForm
             this.Column8.Name = "Column8";
             this.Column8.Width = 200;
             // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "등록자";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 200;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "등록일시";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 200;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(1995, 772);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(238, 129);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "비고등록";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // WorkOrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -318,7 +304,7 @@ namespace POPDisplay.MainForm
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -326,8 +312,5 @@ namespace POPDisplay.MainForm
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.Button button4;
     }
 }

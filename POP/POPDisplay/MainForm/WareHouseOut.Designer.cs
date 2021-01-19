@@ -1,7 +1,7 @@
 ﻿
 namespace POPDisplay.MainForm
 {
-    partial class WareHouseList
+    partial class WareHouseOut
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,6 +29,8 @@ namespace POPDisplay.MainForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,12 +93,19 @@ namespace POPDisplay.MainForm
             this.pnl_All.Controls.Add(this.label2);
             this.pnl_All.Controls.Add(this.textBox1);
             this.pnl_All.Controls.Add(this.panel1);
-            this.pnl_All.Size = new System.Drawing.Size(2348, 1104);
             // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 60;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -104,7 +113,7 @@ namespace POPDisplay.MainForm
             this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(15, 52);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 963);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 953);
             this.dataGridView1.TabIndex = 6;
             // 
             // Column3
@@ -308,6 +317,14 @@ namespace POPDisplay.MainForm
             // 
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.ColumnHeadersHeight = 60;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -315,7 +332,7 @@ namespace POPDisplay.MainForm
             this.dataGridViewTextBoxColumn3});
             this.dataGridView2.Location = new System.Drawing.Point(816, 52);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(650, 963);
+            this.dataGridView2.Size = new System.Drawing.Size(650, 953);
             this.dataGridView2.TabIndex = 24;
             // 
             // dataGridViewTextBoxColumn1
@@ -362,7 +379,7 @@ namespace POPDisplay.MainForm
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1613, 1015);
+            this.panel1.Size = new System.Drawing.Size(1613, 1005);
             this.panel1.TabIndex = 26;
             // 
             // button8
@@ -405,11 +422,11 @@ namespace POPDisplay.MainForm
             this.button7.Text = "△";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // WareHouseList
+            // WareHouseOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.ClientSize = new System.Drawing.Size(2361, 1171);
-            this.Name = "WareHouseList";
+            this.Name = "WareHouseOut";
             this.pnl_All.ResumeLayout(false);
             this.pnl_All.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();

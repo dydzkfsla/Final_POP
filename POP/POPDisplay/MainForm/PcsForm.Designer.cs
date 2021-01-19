@@ -1,7 +1,7 @@
 ﻿
-namespace POPDisplay.PopUp
+namespace POPDisplay.MainForm
 {
-    partial class NoteForm
+    partial class PcsForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,43 +29,29 @@ namespace POPDisplay.PopUp
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(272, 74);
-            this.label1.Text = "비고입력";
+            this.label1.Text = "공정현황";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.SetChildIndex(this.textBox1, 0);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("나눔고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(16, 17);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(952, 721);
-            this.textBox1.TabIndex = 16;
-            // 
-            // NoteForm
+            // PcsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
-            this.ClientSize = new System.Drawing.Size(1023, 1021);
-            this.Name = "NoteForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(2361, 1171);
+            this.Name = "PcsForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MaxSizeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

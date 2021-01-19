@@ -1,7 +1,7 @@
 ﻿
 namespace POPDisplay.PopUp
 {
-    partial class NoteForm
+    partial class NewPcsSetForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,43 +29,25 @@ namespace POPDisplay.PopUp
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(272, 74);
-            this.label1.Text = "비고입력";
+            this.label1.Size = new System.Drawing.Size(488, 74);
+            this.label1.Text = "새공정 정보 입력";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.SetChildIndex(this.textBox1, 0);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("나눔고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(16, 17);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(952, 721);
-            this.textBox1.TabIndex = 16;
-            // 
-            // NoteForm
+            // NewPcsSetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.ClientSize = new System.Drawing.Size(1023, 1021);
-            this.Name = "NoteForm";
+            this.Name = "NewPcsSetForm";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

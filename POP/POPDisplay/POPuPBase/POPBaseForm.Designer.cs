@@ -1,5 +1,5 @@
 ﻿
-namespace POPDisplay.POPBase
+namespace POPDisplay.POPUpBase
 {
     partial class POPBaseForm
     {
@@ -31,9 +31,8 @@ namespace POPDisplay.POPBase
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,25 +51,13 @@ namespace POPDisplay.POPBase
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(20, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(983, 908);
             this.panel1.TabIndex = 7;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(144, 758);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 129);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "취소";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -83,14 +70,16 @@ namespace POPDisplay.POPBase
             this.button1.Text = "입력";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button3
             // 
-            this.textBox1.Font = new System.Drawing.Font("나눔고딕", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(19, 15);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(947, 723);
-            this.textBox1.TabIndex = 16;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(144, 758);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(204, 129);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "취소";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // POPBaseForm
             // 
@@ -102,11 +91,10 @@ namespace POPDisplay.POPBase
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "POPBaseForm";
             this.Text = "POPBaseForm";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,8 +104,7 @@ namespace POPDisplay.POPBase
 
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button3;
     }
 }

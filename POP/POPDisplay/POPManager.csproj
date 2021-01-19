@@ -87,6 +87,12 @@
     <Compile Include="BaseForm\ShowListForm.Designer.cs">
       <DependentUpon>ShowListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlCustom\testCustomControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlCustom\testCustomControl1.Designer.cs">
+      <DependentUpon>testCustomControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlUser\ProcessInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,17 +117,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\ProcessInfoForm.cs">
+    <Compile Include="MainForm\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\ProcessInfoForm.Designer.cs">
-      <DependentUpon>ProcessInfoForm.cs</DependentUpon>
+    <Compile Include="MainForm\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\WareHouseList.cs">
+    <Compile Include="MainForm\PcsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\WareHouseList.Designer.cs">
-      <DependentUpon>WareHouseList.cs</DependentUpon>
+    <Compile Include="MainForm\PcsForm.Designer.cs">
+      <DependentUpon>PcsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\ProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\ProcessForm.Designer.cs">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\WareHouseOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\WareHouseOut.Designer.cs">
+      <DependentUpon>WareHouseOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\WareHouseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\WareHouseManager.Designer.cs">
+      <DependentUpon>WareHouseManager.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm\WorkOrderList.cs">
       <SubType>Form</SubType>
@@ -129,17 +153,41 @@
     <Compile Include="MainForm\WorkOrderList.Designer.cs">
       <DependentUpon>WorkOrderList.cs</DependentUpon>
     </Compile>
-    <Compile Include="POPBase\POPBaseForm.cs">
+    <Compile Include="POPuPBase\POPBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POPBase\POPBaseForm.Designer.cs">
+    <Compile Include="POPuPBase\POPBaseForm.Designer.cs">
       <DependentUpon>POPBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\NewPcsSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\NewPcsSetForm.Designer.cs">
+      <DependentUpon>NewPcsSetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PopUp\NoteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PopUp\NoteForm.Designer.cs">
       <DependentUpon>NoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\PcsStateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\PcsStateForm.Designer.cs">
+      <DependentUpon>PcsStateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\PcsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\PcsInfoForm.Designer.cs">
+      <DependentUpon>PcsInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\ShowPcsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\ShowPcsInfoForm.Designer.cs">
+      <DependentUpon>ShowPcsInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,20 +220,38 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\ProcessInfoForm.resx">
-      <DependentUpon>ProcessInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\PcsForm.resx">
+      <DependentUpon>PcsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\WareHouseList.resx">
-      <DependentUpon>WareHouseList.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\ProcessForm.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\WareHouseOut.resx">
+      <DependentUpon>WareHouseOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\WareHouseManager.resx">
+      <DependentUpon>WareHouseManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\WorkOrderList.resx">
       <DependentUpon>WorkOrderList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POPBase\POPBaseForm.resx">
+    <EmbeddedResource Include="POPuPBase\POPBaseForm.resx">
       <DependentUpon>POPBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\NewPcsSetForm.resx">
+      <DependentUpon>NewPcsSetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp\NoteForm.resx">
       <DependentUpon>NoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\PcsStateForm.resx">
+      <DependentUpon>PcsStateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\PcsInfoForm.resx">
+      <DependentUpon>PcsInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\ShowPcsInfoForm.resx">
+      <DependentUpon>ShowPcsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -211,9 +277,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControlCustom\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Cancel_32x32.png" />
   </ItemGroup>
