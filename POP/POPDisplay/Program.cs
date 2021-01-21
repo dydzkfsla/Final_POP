@@ -18,7 +18,7 @@ namespace POPDisplay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm.WorkOrderList());
+            Application.Run(new MainForm.LogIn());
         }
     }
 }

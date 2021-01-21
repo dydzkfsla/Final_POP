@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DAC;
+using log4net;
+using POPDisplay.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POPDisplay.POPUpBase
+namespace POPDisplay.MainForm
 {
-    public partial class POPBaseForm : Form
+    public partial class LogIn : Form
     {
-        public POPBaseForm()
+        bool thisMax = false;
+        Size fstSize;
+        ILog log = log4net.LogManager.GetLogger(typeof(LogIn));
+
+        public LogIn()
         {
             InitializeComponent();
         }
@@ -22,6 +29,21 @@ namespace POPDisplay.POPUpBase
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void pic_MaxSizeBtn_Click(object sender, EventArgs e)
+        {
+            if (!thisMax)
+            {
+                fstSize = this.Size;
+                this.WindowState = FormWindowState.Maximized;
+                thisMax = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = fstSize;
+                thisMax = false;
+            }
+        }
 
         private void pic_CancleBtn_Click(object sender, EventArgs e)
         {
@@ -84,5 +106,27 @@ namespace POPDisplay.POPUpBase
         }
 
         #endregion
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(255, 221, 85);
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            EmployeeService service = new EmployeeService(log);
+            bool result = service.LoginCheck(txt_ID.Text);
+
+            if(result)
+            {
+                MainMenu main = new MainMenu();
+                main.Show();
+            }
+            else
+            {
+                MessageBox.Show("로그인실패");
+            }
+
+        }
     }
 }
