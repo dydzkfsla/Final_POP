@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POPDisplay.PopUp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,12 @@ namespace POPDisplay.MainForm
         public WorkOrderList()
         {
             InitializeComponent();
+        }
+
+        private void btn_PcsStart_Click(object sender, EventArgs e)
+        {
+            PcsStateForm frm = new PcsStateForm();
+            frm.Show();
         }
     }
 }

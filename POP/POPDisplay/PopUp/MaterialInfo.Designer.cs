@@ -39,6 +39,8 @@ namespace POPDisplay.PopUp
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +73,12 @@ namespace POPDisplay.PopUp
             // 
             // button1
             // 
+            this.button1.Location = new System.Drawing.Point(641, 717);
             this.button1.Text = "확인";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(150, 717);
             // 
             // label2
             // 
@@ -155,13 +162,15 @@ namespace POPDisplay.PopUp
             this.textBox4.Size = new System.Drawing.Size(783, 81);
             this.textBox4.TabIndex = 24;
             // 
-            // LabelInfo
+            // MaterialInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.ClientSize = new System.Drawing.Size(1023, 1021);
-            this.Name = "LabelInfo";
+            this.Name = "MaterialInfo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

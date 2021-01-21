@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace POPDisplay.PopUp
 {
-    public partial class PcsInfoForm : POPDisplay.POPUpBase.POPBaseForm
+    public partial class ProductCheckForm : POPDisplay.POPUpBase.POPBaseForm
     {
-        public PcsInfoForm()
+        public ProductCheckForm()
         {
             InitializeComponent();
         }

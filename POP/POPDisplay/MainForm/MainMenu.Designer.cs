@@ -32,7 +32,6 @@ namespace POPDisplay.MainForm
             this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
@@ -46,23 +45,24 @@ namespace POPDisplay.MainForm
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Size = new System.Drawing.Size(983, 803);
             this.panel1.Controls.SetChildIndex(this.button3, 0);
             this.panel1.Controls.SetChildIndex(this.button1, 0);
             this.panel1.Controls.SetChildIndex(this.button2, 0);
             this.panel1.Controls.SetChildIndex(this.button4, 0);
-            this.panel1.Controls.SetChildIndex(this.button5, 0);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(660, 626);
             this.button1.Text = "종료";
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(169, 626);
             this.button3.Text = "로그아웃";
             // 
             // button2
@@ -78,22 +78,12 @@ namespace POPDisplay.MainForm
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(26, 242);
+            this.button4.Location = new System.Drawing.Point(26, 212);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(934, 153);
             this.button4.TabIndex = 17;
             this.button4.Text = "설비 현황 보기";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button5.Location = new System.Drawing.Point(26, 467);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(934, 153);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "창고 정보 보기";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // contextMenuStrip1
             // 
@@ -103,7 +93,7 @@ namespace POPDisplay.MainForm
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
-            this.ClientSize = new System.Drawing.Size(1023, 1021);
+            this.ClientSize = new System.Drawing.Size(1023, 923);
             this.Name = "MainMenu";
             this.Controls.SetChildIndex(this.pic_MinSizeBtn, 0);
             this.Controls.SetChildIndex(this.pic_CancleBtn, 0);
@@ -118,8 +108,6 @@ namespace POPDisplay.MainForm
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

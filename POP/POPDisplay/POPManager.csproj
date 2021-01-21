@@ -147,11 +147,11 @@
     <Compile Include="PopUp\PcsStateForm.Designer.cs">
       <DependentUpon>PcsStateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopUp\PcsInfoForm.cs">
+    <Compile Include="PopUp\ProductCheckForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopUp\PcsInfoForm.Designer.cs">
-      <DependentUpon>PcsInfoForm.cs</DependentUpon>
+    <Compile Include="PopUp\ProductCheckForm.Designer.cs">
+      <DependentUpon>ProductCheckForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PopUp\ShowPcsInfoForm.cs">
       <SubType>Form</SubType>
@@ -208,8 +208,8 @@
     <EmbeddedResource Include="PopUp\PcsStateForm.resx">
       <DependentUpon>PcsStateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopUp\PcsInfoForm.resx">
-      <DependentUpon>PcsInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="PopUp\ProductCheckForm.resx">
+      <DependentUpon>ProductCheckForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp\ShowPcsInfoForm.resx">
       <DependentUpon>ShowPcsInfoForm.cs</DependentUpon>

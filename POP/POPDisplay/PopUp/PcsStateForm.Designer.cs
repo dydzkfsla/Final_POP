@@ -29,44 +29,64 @@ namespace POPDisplay.PopUp
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.btn_ShowDetail = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btn_ProdCheck = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(428, 74);
-            this.label1.Text = "현재 공정 정보";
+            this.label1.Text = "현재 작업 정보";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_ProdCheck);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.btn_ShowDetail);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -74,29 +94,15 @@ namespace POPDisplay.PopUp
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Size = new System.Drawing.Size(994, 908);
-            this.panel1.Controls.SetChildIndex(this.textBox2, 0);
-            this.panel1.Controls.SetChildIndex(this.label4, 0);
+            this.panel1.Size = new System.Drawing.Size(1619, 908);
             this.panel1.Controls.SetChildIndex(this.textBox1, 0);
             this.panel1.Controls.SetChildIndex(this.label2, 0);
             this.panel1.Controls.SetChildIndex(this.textBox5, 0);
             this.panel1.Controls.SetChildIndex(this.label6, 0);
-            this.panel1.Controls.SetChildIndex(this.label7, 0);
-            this.panel1.Controls.SetChildIndex(this.comboBox1, 0);
-            this.panel1.Controls.SetChildIndex(this.label8, 0);
-            this.panel1.Controls.SetChildIndex(this.comboBox2, 0);
-            this.panel1.Controls.SetChildIndex(this.button3, 0);
-            this.panel1.Controls.SetChildIndex(this.button1, 0);
             this.panel1.Controls.SetChildIndex(this.button2, 0);
             this.panel1.Controls.SetChildIndex(this.button4, 0);
             this.panel1.Controls.SetChildIndex(this.textBox3, 0);
@@ -104,45 +110,37 @@ namespace POPDisplay.PopUp
             this.panel1.Controls.SetChildIndex(this.button5, 0);
             this.panel1.Controls.SetChildIndex(this.button6, 0);
             this.panel1.Controls.SetChildIndex(this.btn_ShowDetail, 0);
-            this.panel1.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox4, 0);
+            this.panel1.Controls.SetChildIndex(this.label7, 0);
+            this.panel1.Controls.SetChildIndex(this.button7, 0);
             this.panel1.Controls.SetChildIndex(this.label5, 0);
+            this.panel1.Controls.SetChildIndex(this.panel2, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox7, 0);
+            this.panel1.Controls.SetChildIndex(this.label9, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox8, 0);
+            this.panel1.Controls.SetChildIndex(this.label10, 0);
+            this.panel1.Controls.SetChildIndex(this.button3, 0);
+            this.panel1.Controls.SetChildIndex(this.button1, 0);
+            this.panel1.Controls.SetChildIndex(this.button8, 0);
+            this.panel1.Controls.SetChildIndex(this.btn_ProdCheck, 0);
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(641, 758);
+            this.button1.Location = new System.Drawing.Point(953, 758);
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.Location = new System.Drawing.Point(150, 758);
+            this.button3.Location = new System.Drawing.Point(462, 758);
             // 
             // pic_CancleBtn
             // 
-            this.pic_CancleBtn.Location = new System.Drawing.Point(953, 12);
+            this.pic_CancleBtn.Location = new System.Drawing.Point(1574, 12);
             // 
             // pic_MinSizeBtn
             // 
-            this.pic_MinSizeBtn.Location = new System.Drawing.Point(860, 12);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(40, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(402, 81);
-            this.textBox2.TabIndex = 39;
-            this.textBox2.Text = "code";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(34, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 34);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "공정코드";
+            this.pic_MinSizeBtn.Location = new System.Drawing.Point(1481, 12);
             // 
             // textBox1
             // 
@@ -167,9 +165,9 @@ namespace POPDisplay.PopUp
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(507, 74);
+            this.textBox5.Location = new System.Drawing.Point(40, 74);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(402, 81);
+            this.textBox5.Size = new System.Drawing.Size(626, 81);
             this.textBox5.TabIndex = 47;
             this.textBox5.Text = "공정명";
             // 
@@ -177,49 +175,11 @@ namespace POPDisplay.PopUp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(501, 37);
+            this.label6.Location = new System.Drawing.Point(34, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 34);
             this.label6.TabIndex = 48;
             this.label6.Text = "공정명";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(34, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 34);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "사용여부";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(40, 232);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(402, 82);
-            this.comboBox1.TabIndex = 50;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(501, 195);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 34);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "현재상태";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(507, 232);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(402, 82);
-            this.comboBox2.TabIndex = 52;
             // 
             // button2
             // 
@@ -266,119 +226,319 @@ namespace POPDisplay.PopUp
             this.button5.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.Location = new System.Drawing.Point(40, 636);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(402, 81);
+            this.button5.Size = new System.Drawing.Size(195, 81);
             this.button5.TabIndex = 57;
             this.button5.Text = "설비 멈춤";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button6.Location = new System.Drawing.Point(507, 636);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(402, 81);
-            this.button6.TabIndex = 58;
-            this.button6.Text = "부품파손 등록";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // btn_ShowDetail
             // 
             this.btn_ShowDetail.Font = new System.Drawing.Font("나눔고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_ShowDetail.Location = new System.Drawing.Point(932, 311);
+            this.btn_ShowDetail.Location = new System.Drawing.Point(725, 74);
             this.btn_ShowDetail.Name = "btn_ShowDetail";
-            this.btn_ShowDetail.Size = new System.Drawing.Size(59, 105);
+            this.btn_ShowDetail.Size = new System.Drawing.Size(184, 218);
             this.btn_ShowDetail.TabIndex = 59;
-            this.btn_ShowDetail.Text = "▷";
+            this.btn_ShowDetail.Text = "작업실적 입력";
             this.btn_ShowDetail.UseVisualStyleBackColor = true;
             this.btn_ShowDetail.Click += new System.EventHandler(this.btn_ShowDetail_Click);
             // 
-            // dataGridView1
+            // label7
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(1002, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 643);
-            this.dataGridView1.TabIndex = 60;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(34, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(177, 34);
+            this.label7.TabIndex = 65;
+            this.label7.Text = "생산물품이름";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(40, 211);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(626, 81);
+            this.textBox4.TabIndex = 64;
+            this.textBox4.Text = "공정명";
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button7.Location = new System.Drawing.Point(1411, 11);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(189, 81);
+            this.button7.TabIndex = 68;
+            this.button7.Text = "비고등록";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(996, 37);
+            this.label5.Location = new System.Drawing.Point(1017, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 34);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "생산현황";
+            this.label5.TabIndex = 69;
+            this.label5.Text = "숫자패드";
             // 
-            // Column2
+            // panel2
             // 
-            this.Column2.HeaderText = "설비코드";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
+            this.panel2.Controls.Add(this.button18);
+            this.panel2.Controls.Add(this.button19);
+            this.panel2.Controls.Add(this.button20);
+            this.panel2.Controls.Add(this.button15);
+            this.panel2.Controls.Add(this.button16);
+            this.panel2.Controls.Add(this.button17);
+            this.panel2.Controls.Add(this.button12);
+            this.panel2.Controls.Add(this.button13);
+            this.panel2.Controls.Add(this.button14);
+            this.panel2.Controls.Add(this.button11);
+            this.panel2.Controls.Add(this.button10);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Location = new System.Drawing.Point(1023, 331);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(515, 336);
+            this.panel2.TabIndex = 70;
             // 
-            // Column3
+            // button18
             // 
-            this.Column3.HeaderText = "총샌산량";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 130;
+            this.button18.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button18.Location = new System.Drawing.Point(381, 223);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(117, 98);
+            this.button18.TabIndex = 87;
+            this.button18.Text = "0";
+            this.button18.UseVisualStyleBackColor = true;
             // 
-            // Column4
+            // button19
             // 
-            this.Column4.HeaderText = "양품갯수";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 130;
+            this.button19.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button19.Location = new System.Drawing.Point(381, 119);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(117, 98);
+            this.button19.TabIndex = 86;
+            this.button19.Text = ".";
+            this.button19.UseVisualStyleBackColor = true;
             // 
-            // Column1
+            // button20
             // 
-            this.Column1.HeaderText = "불량갯수";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
+            this.button20.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button20.Location = new System.Drawing.Point(381, 15);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(117, 98);
+            this.button20.TabIndex = 85;
+            this.button20.Text = "지우기";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button15.Location = new System.Drawing.Point(258, 223);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(117, 98);
+            this.button15.TabIndex = 84;
+            this.button15.Text = "9";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button16.Location = new System.Drawing.Point(135, 223);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(117, 98);
+            this.button16.TabIndex = 83;
+            this.button16.Text = "8";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button17.Location = new System.Drawing.Point(12, 223);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(117, 98);
+            this.button17.TabIndex = 82;
+            this.button17.Text = "7";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button12.Location = new System.Drawing.Point(258, 119);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(117, 98);
+            this.button12.TabIndex = 81;
+            this.button12.Text = "6";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button13.Location = new System.Drawing.Point(135, 119);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(117, 98);
+            this.button13.TabIndex = 80;
+            this.button13.Text = "5";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button14.Location = new System.Drawing.Point(12, 119);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(117, 98);
+            this.button14.TabIndex = 79;
+            this.button14.Text = "4";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button11.Location = new System.Drawing.Point(258, 15);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(117, 98);
+            this.button11.TabIndex = 78;
+            this.button11.Text = "3";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button10.Location = new System.Drawing.Point(135, 15);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(117, 98);
+            this.button10.TabIndex = 77;
+            this.button10.Text = "2";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button9.Location = new System.Drawing.Point(12, 15);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(117, 98);
+            this.button9.TabIndex = 76;
+            this.button9.Text = "1";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(1017, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 34);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "양품";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox7.Location = new System.Drawing.Point(1023, 48);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(319, 81);
+            this.textBox7.TabIndex = 71;
+            this.textBox7.Text = "0";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(1017, 149);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 34);
+            this.label10.TabIndex = 74;
+            this.label10.Text = "불량품";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox8.Location = new System.Drawing.Point(1023, 186);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(319, 81);
+            this.textBox8.TabIndex = 73;
+            this.textBox8.Text = "0";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button6.Location = new System.Drawing.Point(264, 636);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(195, 81);
+            this.button6.TabIndex = 58;
+            this.button6.Text = "파손 등록";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button8.Location = new System.Drawing.Point(488, 636);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(195, 81);
+            this.button8.TabIndex = 75;
+            this.button8.Text = "자재 정보";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // btn_ProdCheck
+            // 
+            this.btn_ProdCheck.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_ProdCheck.Location = new System.Drawing.Point(714, 636);
+            this.btn_ProdCheck.Name = "btn_ProdCheck";
+            this.btn_ProdCheck.Size = new System.Drawing.Size(195, 81);
+            this.btn_ProdCheck.TabIndex = 76;
+            this.btn_ProdCheck.Text = "검사 항목";
+            this.btn_ProdCheck.UseVisualStyleBackColor = true;
             // 
             // PcsStateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
-            this.ClientSize = new System.Drawing.Size(1035, 1021);
+            this.ClientSize = new System.Drawing.Size(1656, 1021);
             this.Name = "PcsStateForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_ShowDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_ProdCheck;
     }
 }
