@@ -35,6 +35,8 @@ namespace POPDisplay.MainForm
             this.button5 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,10 +57,12 @@ namespace POPDisplay.MainForm
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Text = "종료";
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Text = "로그아웃";
             // 
             // button2
@@ -101,9 +105,13 @@ namespace POPDisplay.MainForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.ClientSize = new System.Drawing.Size(1023, 1021);
             this.Name = "MainMenu";
+            this.Controls.SetChildIndex(this.pic_MinSizeBtn, 0);
+            this.Controls.SetChildIndex(this.pic_CancleBtn, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

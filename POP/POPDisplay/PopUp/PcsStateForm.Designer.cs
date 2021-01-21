@@ -45,7 +45,17 @@ namespace POPDisplay.PopUp
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.btn_ShowDetail = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +65,9 @@ namespace POPDisplay.PopUp
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.btn_ShowDetail);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label3);
@@ -71,6 +84,7 @@ namespace POPDisplay.PopUp
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Size = new System.Drawing.Size(994, 908);
             this.panel1.Controls.SetChildIndex(this.textBox2, 0);
             this.panel1.Controls.SetChildIndex(this.label4, 0);
             this.panel1.Controls.SetChildIndex(this.textBox1, 0);
@@ -89,10 +103,30 @@ namespace POPDisplay.PopUp
             this.panel1.Controls.SetChildIndex(this.label3, 0);
             this.panel1.Controls.SetChildIndex(this.button5, 0);
             this.panel1.Controls.SetChildIndex(this.button6, 0);
+            this.panel1.Controls.SetChildIndex(this.btn_ShowDetail, 0);
+            this.panel1.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.panel1.Controls.SetChildIndex(this.label5, 0);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Location = new System.Drawing.Point(641, 758);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.Location = new System.Drawing.Point(150, 758);
+            // 
+            // pic_CancleBtn
+            // 
+            this.pic_CancleBtn.Location = new System.Drawing.Point(953, 12);
+            // 
+            // pic_MinSizeBtn
+            // 
+            this.pic_MinSizeBtn.Location = new System.Drawing.Point(860, 12);
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.Location = new System.Drawing.Point(40, 74);
             this.textBox2.Name = "textBox2";
@@ -102,7 +136,6 @@ namespace POPDisplay.PopUp
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(34, 37);
@@ -113,7 +146,6 @@ namespace POPDisplay.PopUp
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(40, 515);
             this.textBox1.Name = "textBox1";
@@ -124,7 +156,6 @@ namespace POPDisplay.PopUp
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(34, 478);
@@ -135,7 +166,6 @@ namespace POPDisplay.PopUp
             // 
             // textBox5
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox5.Location = new System.Drawing.Point(507, 74);
             this.textBox5.Name = "textBox5";
@@ -145,7 +175,6 @@ namespace POPDisplay.PopUp
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(501, 37);
@@ -156,7 +185,6 @@ namespace POPDisplay.PopUp
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.Location = new System.Drawing.Point(34, 195);
@@ -176,7 +204,6 @@ namespace POPDisplay.PopUp
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.Location = new System.Drawing.Point(501, 195);
@@ -196,7 +223,6 @@ namespace POPDisplay.PopUp
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.Location = new System.Drawing.Point(507, 383);
             this.button2.Name = "button2";
@@ -207,7 +233,6 @@ namespace POPDisplay.PopUp
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.Location = new System.Drawing.Point(725, 383);
             this.button4.Name = "button4";
@@ -218,7 +243,6 @@ namespace POPDisplay.PopUp
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(34, 346);
@@ -229,7 +253,6 @@ namespace POPDisplay.PopUp
             // 
             // textBox3
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("나눔고딕", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox3.Location = new System.Drawing.Point(40, 383);
             this.textBox3.Name = "textBox3";
@@ -240,7 +263,6 @@ namespace POPDisplay.PopUp
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.Location = new System.Drawing.Point(40, 636);
             this.button5.Name = "button5";
@@ -251,7 +273,6 @@ namespace POPDisplay.PopUp
             // 
             // button6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("나눔고딕", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button6.Location = new System.Drawing.Point(507, 636);
             this.button6.Name = "button6";
@@ -260,13 +281,75 @@ namespace POPDisplay.PopUp
             this.button6.Text = "부품파손 등록";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // btn_ShowDetail
+            // 
+            this.btn_ShowDetail.Font = new System.Drawing.Font("나눔고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_ShowDetail.Location = new System.Drawing.Point(932, 311);
+            this.btn_ShowDetail.Name = "btn_ShowDetail";
+            this.btn_ShowDetail.Size = new System.Drawing.Size(59, 105);
+            this.btn_ShowDetail.TabIndex = 59;
+            this.btn_ShowDetail.Text = "▷";
+            this.btn_ShowDetail.UseVisualStyleBackColor = true;
+            this.btn_ShowDetail.Click += new System.EventHandler(this.btn_ShowDetail_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column1});
+            this.dataGridView1.Location = new System.Drawing.Point(1002, 74);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(633, 643);
+            this.dataGridView1.TabIndex = 60;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(996, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 34);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "생산현황";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "설비코드";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "총샌산량";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 130;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "양품갯수";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 130;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "불량갯수";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
+            // 
             // PcsStateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
-            this.ClientSize = new System.Drawing.Size(1023, 1021);
+            this.ClientSize = new System.Drawing.Size(1035, 1021);
             this.Name = "PcsStateForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_CancleBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_MinSizeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +373,12 @@ namespace POPDisplay.PopUp
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_ShowDetail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

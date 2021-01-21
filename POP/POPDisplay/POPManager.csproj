@@ -57,12 +57,6 @@
     <Compile Include="BaseForm\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaseForm\ShowList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +129,11 @@
     <Compile Include="POPuPBase\POPBaseForm.Designer.cs">
       <DependentUpon>POPBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopUp\LabelInfo.cs">
+    <Compile Include="PopUp\MaterialInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopUp\LabelInfo.Designer.cs">
-      <DependentUpon>LabelInfo.cs</DependentUpon>
+    <Compile Include="PopUp\MaterialInfo.Designer.cs">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="PopUp\NoteForm.cs">
       <SubType>Form</SubType>
@@ -171,9 +165,6 @@
     <Compile Include="Util\CommonUtil.cs" />
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForm\ShowList.resx">
       <DependentUpon>ShowList.cs</DependentUpon>
@@ -208,8 +199,8 @@
     <EmbeddedResource Include="POPuPBase\POPBaseForm.resx">
       <DependentUpon>POPBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopUp\LabelInfo.resx">
-      <DependentUpon>LabelInfo.cs</DependentUpon>
+    <EmbeddedResource Include="PopUp\MaterialInfo.resx">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp\NoteForm.resx">
       <DependentUpon>NoteForm.cs</DependentUpon>

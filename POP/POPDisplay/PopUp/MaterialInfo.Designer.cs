@@ -1,7 +1,7 @@
 ﻿
 namespace POPDisplay.PopUp
 {
-    partial class LabelInfo
+    partial class MaterialInfo
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.

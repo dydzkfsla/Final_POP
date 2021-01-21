@@ -1,5 +1,6 @@
 ﻿using POPDisplay.BaseForm;
 using POPDisplay.MainForm;
+using POPDisplay.PopUp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace POPDisplay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm.LogIn());
+            Application.Run(new PcsStateForm());
         }
     }
 }
