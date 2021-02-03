@@ -70,12 +70,13 @@ namespace POPDisplay.MainForm
             // 
             // btn_Login
             // 
+            this.btn_Login.BackColor = System.Drawing.Color.White;
             this.btn_Login.Location = new System.Drawing.Point(533, 385);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(98, 35);
             this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "로그인";
-            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // LogIn
@@ -88,7 +89,7 @@ namespace POPDisplay.MainForm
             this.Controls.Add(this.lbl_ID);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LogIn";
             this.Text = "LogIn";
             this.Load += new System.EventHandler(this.LogIn_Load);

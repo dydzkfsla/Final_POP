@@ -45,7 +45,7 @@ namespace POPDisplay
             // radioBtn1
             // 
             this.radioBtn1.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.radioBtn1.Location = new System.Drawing.Point(325, 322);
+            this.radioBtn1.Location = new System.Drawing.Point(377, 287);
             this.radioBtn1.Margin = new System.Windows.Forms.Padding(4);
             this.radioBtn1.Name = "radioBtn1";
             this.radioBtn1.Size = new System.Drawing.Size(70, 26);
