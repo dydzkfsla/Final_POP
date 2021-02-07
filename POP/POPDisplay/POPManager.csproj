@@ -119,10 +119,6 @@
     <Compile Include="MainForm\WorkOrderInfo.Designer.cs">
       <DependentUpon>WorkOrderInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\WorkRecordPopup.cs" />
-    <Compile Include="MainForm\WorkRecordPopup.Designer.cs">
-      <DependentUpon>WorkRecordPopup.cs</DependentUpon>
-    </Compile>
     <Compile Include="MDI\MDIForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +160,6 @@
     <EmbeddedResource Include="MainForm\WorkOrderInfo.resx">
       <DependentUpon>WorkOrderInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\WorkRecordPopup.resx">
-      <DependentUpon>WorkRecordPopup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MDI\MDIForm.resx">
       <DependentUpon>MDIForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +187,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PopUp\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Cancel_32x32.png" />
   </ItemGroup>
