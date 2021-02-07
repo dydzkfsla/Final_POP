@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using WebAPI.Global;
+using System.Diagnostics;
 
 namespace WebAPI.DAC
 {
@@ -40,7 +41,7 @@ namespace WebAPI.DAC
             }
             catch (Exception err)
             {
-                //log.Error("GetUserInfo() 오류: " + err.Message);
+                Debug.WriteLine(err.Message);
                 return null;
             }
         }

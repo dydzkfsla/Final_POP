@@ -39,6 +39,8 @@
             this.btn_ProductCheck = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_WrokOrderForm = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_WorkOrder = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Minmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
@@ -46,6 +48,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl_WorkOrder);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_Stop);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btn_StartWork);
@@ -65,7 +69,7 @@
             // 
             // btn_Stop
             // 
-            this.btn_Stop.Location = new System.Drawing.Point(0, 292);
+            this.btn_Stop.Location = new System.Drawing.Point(0, 362);
             this.btn_Stop.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Stop.Name = "btn_Stop";
             this.btn_Stop.Size = new System.Drawing.Size(200, 76);
@@ -76,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 722);
+            this.button2.Location = new System.Drawing.Point(0, 792);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 76);
@@ -86,7 +90,7 @@
             // 
             // btn_StartWork
             // 
-            this.btn_StartWork.Location = new System.Drawing.Point(0, 206);
+            this.btn_StartWork.Location = new System.Drawing.Point(0, 276);
             this.btn_StartWork.Margin = new System.Windows.Forms.Padding(5);
             this.btn_StartWork.Name = "btn_StartWork";
             this.btn_StartWork.Size = new System.Drawing.Size(200, 76);
@@ -97,7 +101,7 @@
             // 
             // btn_
             // 
-            this.btn_.Location = new System.Drawing.Point(0, 464);
+            this.btn_.Location = new System.Drawing.Point(0, 534);
             this.btn_.Margin = new System.Windows.Forms.Padding(5);
             this.btn_.Name = "btn_";
             this.btn_.Size = new System.Drawing.Size(200, 76);
@@ -130,7 +134,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 636);
+            this.button1.Location = new System.Drawing.Point(0, 706);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 76);
@@ -141,7 +145,7 @@
             // 
             // btn_ProductCheck
             // 
-            this.btn_ProductCheck.Location = new System.Drawing.Point(0, 550);
+            this.btn_ProductCheck.Location = new System.Drawing.Point(0, 620);
             this.btn_ProductCheck.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ProductCheck.Name = "btn_ProductCheck";
             this.btn_ProductCheck.Size = new System.Drawing.Size(200, 76);
@@ -152,7 +156,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(0, 378);
+            this.btn_add.Location = new System.Drawing.Point(0, 448);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(200, 76);
@@ -163,7 +167,7 @@
             // 
             // btn_WrokOrderForm
             // 
-            this.btn_WrokOrderForm.Location = new System.Drawing.Point(0, 120);
+            this.btn_WrokOrderForm.Location = new System.Drawing.Point(0, 190);
             this.btn_WrokOrderForm.Margin = new System.Windows.Forms.Padding(5);
             this.btn_WrokOrderForm.Name = "btn_WrokOrderForm";
             this.btn_WrokOrderForm.Size = new System.Drawing.Size(200, 76);
@@ -171,6 +175,23 @@
             this.btn_WrokOrderForm.Text = "작업지시 조회";
             this.btn_WrokOrderForm.UseVisualStyleBackColor = true;
             this.btn_WrokOrderForm.Click += new System.EventHandler(this.btn_WrokOrderForm_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "선택 작업 코드";
+            // 
+            // lbl_WorkOrder
+            // 
+            this.lbl_WorkOrder.AutoSize = true;
+            this.lbl_WorkOrder.Location = new System.Drawing.Point(3, 123);
+            this.lbl_WorkOrder.Name = "lbl_WorkOrder";
+            this.lbl_WorkOrder.Size = new System.Drawing.Size(0, 19);
+            this.lbl_WorkOrder.TabIndex = 11;
             // 
             // MDIForm
             // 
@@ -187,6 +208,7 @@
             this.Text = "MDIForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MDIForm_FormClosing);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Minmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.ResumeLayout(false);
@@ -206,5 +228,7 @@
         private System.Windows.Forms.Button btn_StartWork;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Stop;
+        private System.Windows.Forms.Label lbl_WorkOrder;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -66,6 +66,7 @@
             this.dgv_WorkOrder.RowTemplate.Height = 23;
             this.dgv_WorkOrder.Size = new System.Drawing.Size(1285, 835);
             this.dgv_WorkOrder.TabIndex = 0;
+            this.dgv_WorkOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkOrder_CellClick);
             // 
             // WorkOrderInfo
             // 

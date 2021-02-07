@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POPDisplay.MDI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,12 @@ namespace POPDisplay.MainForm
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "개당 생산 시간", "WO_TactTime");
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "목표시간", "WO_EstimatedEnd", 200 , Format: "yyyy-MM-dd");
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "우선순위", "WO_Priority");
+        }
+
+        private void dgv_WorkOrder_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.MdiParent.Controls["panel1"].Controls["lbl_WorkOrder"].Text = dgv_WorkOrder["WO_Code", e.RowIndex].Value.ToString();
+            ((MDIForm)this.MdiParent).selectdWork = (SP_WorkOrderSherchTeamVO)dgv_WorkOrder.Rows[e.RowIndex].DataBoundItem;
         }
     }
 }

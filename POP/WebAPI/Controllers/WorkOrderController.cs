@@ -25,15 +25,25 @@ namespace WebAPI.Controllers
             return Ok(msg);
         }
 
-        [Route("Start/{Code}")]
-        public IHttpActionResult GetStartWorkFromCode(string Code)
+        [Route("Start/{Code}/{Writer}")]
+        public IHttpActionResult GetStartWorkFromCode(string Code,string Writer)
         {
             ApiMessage<bool> msg = new ApiMessage<bool>();
 
             WorkOrderDAC uDac = new WorkOrderDAC();
             msg.Data = uDac.StartWorkFromCode(Code);
-            msg.ResultCode = (!msg.Data) ? "F" : "S";
-            msg.ResultMessage = (!msg.Data) ? "해당하는 정보가 없습니다." : "OK";
+            if (msg.Data)
+            {
+                WorkRecordDAC Dac = new WorkRecordDAC();
+                msg.Data = Dac.SP_StartWorkRecord(Code, Writer);
+                msg.ResultCode = (msg.Data == false) ? "F" : "S";
+                msg.ResultMessage = (msg.Data == false) ? "해당하는 정보가 없습니다." : "OK";
+            }
+            else
+            {
+                msg.ResultCode = "F";
+                msg.ResultMessage = "해당하는 정보가 없습니다.";
+            }
 
             return Ok(msg);
         }

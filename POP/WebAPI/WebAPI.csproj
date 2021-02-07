@@ -99,6 +99,7 @@
     <Compile Include="Controllers\ProductCheckController.cs" />
     <Compile Include="Controllers\TeamInfoController.cs" />
     <Compile Include="Controllers\WorkOrderController.cs" />
+    <Compile Include="Controllers\WorkRecordController.cs" />
     <Compile Include="DAC\EmployeesDAC.cs" />
     <Compile Include="DAC\Helper.cs" />
     <Compile Include="DAC\ProcessDetailDAC.cs" />
@@ -106,10 +107,12 @@
     <Compile Include="DAC\TeamInfoDAC.cs" />
     <Compile Include="DAC\ViewDAC.cs" />
     <Compile Include="DAC\WorkOrderDAC.cs" />
+    <Compile Include="DAC\WorkRecordDAC.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Global\ConnString.cs" />
+    <Compile Include="Liberary\CommonUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

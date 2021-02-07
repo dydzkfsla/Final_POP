@@ -18,7 +18,7 @@ namespace POPDisplay.MDI
     {
         WorkOrderInfo workOrder;
         ProcessDetailInfo processDetail;
-        SP_WorkOrderSherchTeamVO selectdWork;
+        public SP_WorkOrderSherchTeamVO selectdWork;
         ProductCheckInfo product;
         public MDIForm()
         {
@@ -97,8 +97,9 @@ namespace POPDisplay.MDI
         {
             if(!SetSelectOrder())
                 return;
+            #region 작업 조회및 작업 시작
             HttpClient client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "WorkOrder/Start/" + selectdWork.WO_Code;
+            string UrlApi = Global.Global.APIAddress + "WorkOrder/Start/" + selectdWork.WO_Code + "/" + Global.Global.employees.Emp_Code;
             HttpResponseMessage rm = await client.GetAsync(UrlApi);
             if (rm.IsSuccessStatusCode)
             {
@@ -116,6 +117,10 @@ namespace POPDisplay.MDI
                     MessageBox.Show("검색된 작업 지시 사항이 없습니다.");
                 }
             }
+            #endregion
+
+
+
         }
         #endregion
 
@@ -180,11 +185,14 @@ namespace POPDisplay.MDI
 
         }
 
-        #endregion
-
         private void button1_Click(object sender, EventArgs e)
         {
-
+            WorkRecordPopUp workRecordPopUp = new WorkRecordPopUp(selectdWork.WO_Code);
+            workRecordPopUp.ShowDialog();
         }
+
+
+
+        #endregion
     }
 }

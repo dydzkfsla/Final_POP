@@ -119,6 +119,12 @@
     <Compile Include="MainForm\WorkOrderInfo.Designer.cs">
       <DependentUpon>WorkOrderInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm\WorkRecordPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\WorkRecordPopUp.Designer.cs">
+      <DependentUpon>WorkRecordPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI\MDIForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\WorkOrderInfo.resx">
       <DependentUpon>WorkOrderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\WorkRecordPopUp.resx">
+      <DependentUpon>WorkRecordPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI\MDIForm.resx">
       <DependentUpon>MDIForm.cs</DependentUpon>
