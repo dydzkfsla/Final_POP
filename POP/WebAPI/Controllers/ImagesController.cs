@@ -4,21 +4,21 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.UI;
 using VO;
-using WebAPI.DAC;
 
 namespace WebAPI.Controllers
 {
-    [RoutePrefix("api/TeamInfo")]
-    public class TeamInfoController : ApiController
+    [RoutePrefix("api/Images")]
+    public class ImagesController : ApiController
     {
-        [Route("Emp/{Code}")]
-        public IHttpActionResult GetTeamFormEmp(string Code)
+        [Route("Images/{IamgeName}")]
+        public IHttpActionResult GetIamge(string IamgeName)
         {
-            ApiMessage<List<TeamInfoVO>> msg = new ApiMessage<List<TeamInfoVO>>();
+            string ImagePase =  Url.Content("/Images/cowboy-2028626_12801.png");
+            ApiMessage<string> msg = new ApiMessage<string>();
 
-            ViewDAC uDac = new ViewDAC();
-            msg.Data = uDac.GetTeamFormEmp(Code);
+            msg.Data = ImagePase;
             msg.ResultCode = (msg.Data == null) ? "F" : "S";
             msg.ResultMessage = (msg.Data == null) ? "해당하는 정보가 없습니다." : "OK";
 

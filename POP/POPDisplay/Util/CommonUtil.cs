@@ -72,18 +72,21 @@ namespace POPDisplay
                             string dataPropertyName,
                             int colWidth = 100,
                             bool visibility = true,
-                            DataGridViewContentAlignment textAlign = DataGridViewContentAlignment.MiddleLeft)
+                            DataGridViewContentAlignment textAlign = DataGridViewContentAlignment.MiddleLeft,
+                            string Format = null)
         {
             DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
-            col.Name = dataPropertyName; // 텍스트박스 컬럼 열의 이름 설정
-            col.HeaderText = headerText; // 텍스트박스 컬럼 열의 머리글 설정
-            col.DataPropertyName = dataPropertyName; // 텍스트 박스의 데이터원본 프로퍼티 설정
-            col.Width = colWidth; // 텍스트 박스의 너비 설정
-            col.DefaultCellStyle.Alignment = textAlign; // 택스트 박스 컬럼 열의 텍스트 정렬조건 설정
-            col.Visible = visibility; // Visible을 true로 설정
-            col.ReadOnly = true; // 읽을수만 있게 설정
+            col.Name = dataPropertyName;
+            col.HeaderText = headerText;
+            col.DataPropertyName = dataPropertyName;
+            //col.DefaultCellStyle.FormatProvider = format;
+            col.Width = colWidth;
+            col.DefaultCellStyle.Format = Format;
+            col.DefaultCellStyle.Alignment = textAlign;
+            col.Visible = visibility;
+            col.ReadOnly = true;
 
-            dgv.Columns.Add(col); // 데이터그리드뷰에 저장
+            dgv.Columns.Add(col);
         }
         #endregion
 

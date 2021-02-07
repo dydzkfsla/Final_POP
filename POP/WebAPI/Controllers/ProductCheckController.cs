@@ -9,16 +9,16 @@ using WebAPI.DAC;
 
 namespace WebAPI.Controllers
 {
-    [RoutePrefix("api/TeamInfo")]
-    public class TeamInfoController : ApiController
+    [RoutePrefix("api/ProductCheck")]
+    public class ProductCheckController : ApiController
     {
-        [Route("Emp/{Code}")]
-        public IHttpActionResult GetTeamFormEmp(string Code)
+        [Route("Prod/{Code}")]
+        public IHttpActionResult GETProductCheckFromProduct(string Code)
         {
-            ApiMessage<List<TeamInfoVO>> msg = new ApiMessage<List<TeamInfoVO>>();
+            ApiMessage<List<ProductCheckVO>> msg = new ApiMessage<List<ProductCheckVO>>();
 
-            ViewDAC uDac = new ViewDAC();
-            msg.Data = uDac.GetTeamFormEmp(Code);
+            ProductCheckDAC uDac = new ProductCheckDAC();
+            msg.Data = uDac.ProductCheckFromProduct(Code);
             msg.ResultCode = (msg.Data == null) ? "F" : "S";
             msg.ResultMessage = (msg.Data == null) ? "해당하는 정보가 없습니다." : "OK";
 

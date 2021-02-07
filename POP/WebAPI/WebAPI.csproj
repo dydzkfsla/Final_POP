@@ -94,10 +94,18 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\ImagesController.cs" />
+    <Compile Include="Controllers\ProcessDetailController.cs" />
+    <Compile Include="Controllers\ProductCheckController.cs" />
     <Compile Include="Controllers\TeamInfoController.cs" />
+    <Compile Include="Controllers\WorkOrderController.cs" />
     <Compile Include="DAC\EmployeesDAC.cs" />
     <Compile Include="DAC\Helper.cs" />
+    <Compile Include="DAC\ProcessDetailDAC.cs" />
+    <Compile Include="DAC\ProductCheckDAC.cs" />
     <Compile Include="DAC\TeamInfoDAC.cs" />
+    <Compile Include="DAC\ViewDAC.cs" />
+    <Compile Include="DAC\WorkOrderDAC.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -115,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

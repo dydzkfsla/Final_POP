@@ -1,5 +1,4 @@
 ﻿using log4net;
-using POPDisplay.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,13 +39,42 @@ namespace POPDisplay.MainForm
                 JavaScriptSerializer jss = new JavaScriptSerializer();
                 ApiMessage<EmployeesVO> apiMessage = jss.Deserialize<ApiMessage<EmployeesVO>>(result);
 
-                if(apiMessage.ResultCode == "S")
+                if (apiMessage.ResultCode == "S")
                 {
-                    ProcessListForm frm = new ProcessListForm();
-                    if (frm.ShowDialog() == DialogResult.Cancel)
+                    Global.Global.employees = apiMessage.Data;
+                    UrlApi = Global.Global.APIAddress + "TeamInfo/Emp/" + txt_ID.Text;
+                    rm = await client.GetAsync(UrlApi);
+
+                    if (rm.IsSuccessStatusCode)
                     {
-                        this.Activate();
+                        result = await rm.Content.ReadAsStringAsync();
+                        jss = new JavaScriptSerializer();
+                        ApiMessage<List<TeamInfoVO>> Message = jss.Deserialize<ApiMessage<List<TeamInfoVO>>>(result);
+
+
+                        if (Message.ResultCode == "S")
+                        {
+                            Global.Global.TeamInfos = Message.Data;
+                            this.Hide();
+                            MDI.MDIForm MDI = new MDI.MDIForm();
+                            this.OpenCreateForm(MDI);
+                        }
+                        else
+                        {
+                            MessageBox.Show("해당 직원의 검색된 팀이 없습니다.");
+                            lbl_ID.Text = string.Empty;
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("팀 직원 정보 검색중 실패");
+                        lbl_ID.Text = string.Empty;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("검색된 직원 정보가 없습니다.");
+                    lbl_ID.Text = string.Empty;
                 }
             }
         }

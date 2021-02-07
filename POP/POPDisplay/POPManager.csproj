@@ -58,29 +58,11 @@
     <Compile Include="BaseForm\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm\SearchForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ControlCustom\CustomDataGridView.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseForm\SearchForm.Designer.cs">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseForm\ShowDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\ShowDetail.Designer.cs">
-      <DependentUpon>ShowDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseForm\ShowItemInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\ShowItemInfo.Designer.cs">
-      <DependentUpon>ShowItemInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseForm\ShowListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm\ShowListForm.Designer.cs">
-      <DependentUpon>ShowListForm.cs</DependentUpon>
+    <Compile Include="ControlCustom\CustomDataGridView.Designer.cs">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlUser\ProcessInfo.cs">
       <SubType>UserControl</SubType>
@@ -107,43 +89,56 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\Global.cs" />
+    <Compile Include="MainForm\FacilityInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\FacilityInfo.Designer.cs">
+      <DependentUpon>FacilityInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\ProcessListForm.cs">
+    <Compile Include="MainForm\ProcessDetailInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\ProcessListForm.Designer.cs">
-      <DependentUpon>ProcessListForm.cs</DependentUpon>
+    <Compile Include="MainForm\ProcessDetailInfo.Designer.cs">
+      <DependentUpon>ProcessDetailInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\WareHouseListForm.cs">
+    <Compile Include="MainForm\ProductCheckInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\WareHouseListForm.Designer.cs">
-      <DependentUpon>WareHouseListForm.cs</DependentUpon>
+    <Compile Include="MainForm\ProductCheckInfo.Designer.cs">
+      <DependentUpon>ProductCheckInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\WorkOrderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\WorkOrderInfo.Designer.cs">
+      <DependentUpon>WorkOrderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\WorkRecordPopup.cs" />
+    <Compile Include="MainForm\WorkRecordPopup.Designer.cs">
+      <DependentUpon>WorkRecordPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MDIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\MDIForm.Designer.cs">
+      <DependentUpon>MDIForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\EmployeeService.cs" />
     <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="Util\ExtenstionMethod.cs" />
     <Compile Include="Util\LoggingUtility.cs" />
     <EmbeddedResource Include="BaseForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\SearchForm.resx">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\ShowDetail.resx">
-      <DependentUpon>ShowDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\ShowItemInfo.resx">
-      <DependentUpon>ShowItemInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseForm\ShowListForm.resx">
-      <DependentUpon>ShowListForm.cs</DependentUpon>
+    <EmbeddedResource Include="ControlCustom\CustomDataGridView.resx">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlUser\ProcessInfo.resx">
       <DependentUpon>ProcessInfo.cs</DependentUpon>
@@ -154,14 +149,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\FacilityInfo.resx">
+      <DependentUpon>FacilityInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\ProcessListForm.resx">
-      <DependentUpon>ProcessListForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\ProcessDetailInfo.resx">
+      <DependentUpon>ProcessDetailInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\WareHouseListForm.resx">
-      <DependentUpon>WareHouseListForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm\ProductCheckInfo.resx">
+      <DependentUpon>ProductCheckInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\WorkOrderInfo.resx">
+      <DependentUpon>WorkOrderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\WorkRecordPopup.resx">
+      <DependentUpon>WorkRecordPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MDIForm.resx">
+      <DependentUpon>MDIForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -188,7 +195,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ControlCustom\" />
     <Folder Include="PopUp\" />
   </ItemGroup>
   <ItemGroup>
@@ -249,10 +255,6 @@
     <None Include="Resources\milling-cutters-3191003_1920.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAC\DAC.csproj">
-      <Project>{4f250612-0e8f-49c3-b889-e7b28f221133}</Project>
-      <Name>DAC</Name>
-    </ProjectReference>
     <ProjectReference Include="..\VO\VO.csproj">
       <Project>{1dc4661f-1a55-4a86-a4c1-5f8a516cfe19}</Project>
       <Name>VO</Name>

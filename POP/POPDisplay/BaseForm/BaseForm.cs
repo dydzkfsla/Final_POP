@@ -101,6 +101,10 @@ namespace POPDisplay.BaseForm
         }
 
         #endregion
-        
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            lbl_Title.Text = this.Text;
+        }
     }
 }
