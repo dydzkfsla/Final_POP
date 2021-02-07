@@ -10,9 +10,11 @@ namespace POPDisplay.MainForm
 {
     public partial class WorkRecordPopup : POPDisplay.BaseForm.BaseForm
     {
+        int i = 0;
         public WorkRecordPopup()
         {
             InitializeComponent();
+            
         }
     }
 }
