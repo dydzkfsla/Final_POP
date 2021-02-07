@@ -113,6 +113,16 @@ namespace POPDisplay.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap cowboy_2028626_1280 {
+            get {
+                object obj = ResourceManager.GetObject("cowboy_2028626_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_1727486_1280 {
             get {
                 object obj = ResourceManager.GetObject("delete_1727486_1280", resourceCulture);

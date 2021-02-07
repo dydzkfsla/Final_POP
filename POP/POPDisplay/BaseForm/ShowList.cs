@@ -6,15 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace POPDisplay.MainForm
+namespace POPDisplay.BaseForm
 {
-    public partial class WorkRecordPopup : POPDisplay.BaseForm.BaseForm
+    public partial class ShowList : POPDisplay.BaseForm.BaseForm
     {
-        int i = 0;
-        public WorkRecordPopup()
+        public ShowList()
         {
             InitializeComponent();
-            
+        }
+
+        private void ShowList_Load(object sender, EventArgs e)
+        {
+            //dataGridView1.
         }
     }
 }
