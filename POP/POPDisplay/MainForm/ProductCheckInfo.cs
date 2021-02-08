@@ -25,7 +25,7 @@ namespace POPDisplay.MainForm
         {
             DGV_Set();
 
-            string UrlApi = Global.Global.APIAddress + "ProductCheck/Prod/" + prod_Code;
+            string UrlApi = Global.Global.APIAddress + "/ProductCheck/Prod/" + prod_Code;
             HttpResponseMessage rm = await Client.GetAsync(UrlApi);
 
 

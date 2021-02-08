@@ -32,7 +32,7 @@ namespace POPDisplay.MainForm
             });
             code = code.Left(code.Length - 1);
 
-            string UrlApi = Global.Global.APIAddress + "WorkOrder/Teams/" + code;
+            string UrlApi = Global.Global.APIAddress + "/WorkOrder/Teams/" + code;
             HttpResponseMessage rm = await client.GetAsync(UrlApi);
             if (rm.IsSuccessStatusCode)
             {

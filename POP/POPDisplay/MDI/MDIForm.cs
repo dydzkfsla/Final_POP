@@ -99,7 +99,7 @@ namespace POPDisplay.MDI
                 return;
             #region 작업 조회및 작업 시작
             HttpClient client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "WorkOrder/Start/" + selectdWork.WO_Code + "/" + Global.Global.employees.Emp_Code;
+            string UrlApi = Global.Global.APIAddress + "/WorkOrder/Start/" + selectdWork.WO_Code + "/" + Global.Global.employees.Emp_Code;
             HttpResponseMessage rm = await client.GetAsync(UrlApi);
             if (rm.IsSuccessStatusCode)
             {
@@ -130,7 +130,7 @@ namespace POPDisplay.MDI
             if (!SetSelectOrder())
                 return;
             HttpClient client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "WorkOrder/Stop/" + selectdWork.WO_Code;
+            string UrlApi = Global.Global.APIAddress + "/WorkOrder/Stop/" + selectdWork.WO_Code;
             HttpResponseMessage rm = await client.GetAsync(UrlApi);
             if (rm.IsSuccessStatusCode)
             {

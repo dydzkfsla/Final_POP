@@ -62,7 +62,7 @@ namespace POPDisplay.MainForm
         private async void btn_Add_Click(object sender, EventArgs e)
         {
             HttpClient client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "WorkRecord/WorkQuantity/" + WorkCode+"/" + tbx_BadQuantity.Text + "/" + tbx_GoodsQuantity.Text + "/" + Global.Global.employees.Emp_Code;
+            string UrlApi = Global.Global.APIAddress + "/WorkRecord/WorkQuantity/" + WorkCode+"/" + tbx_BadQuantity.Text + "/" + tbx_GoodsQuantity.Text + "/" + Global.Global.employees.Emp_Code;
 
             HttpResponseMessage rm = await client.GetAsync(UrlApi);
 

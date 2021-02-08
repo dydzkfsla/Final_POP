@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VO;
 
 namespace VO
 {
@@ -31,4 +35,11 @@ namespace VO
         public string PcsD_Code { get; set; }
         public string PcsD_Name { get; set; }
     }
+
+    public class Imagedata
+    {
+        public byte[] image;
+        public string filename;
+    }
+
 }

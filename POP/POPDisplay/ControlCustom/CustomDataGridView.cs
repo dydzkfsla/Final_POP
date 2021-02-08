@@ -80,13 +80,14 @@ namespace POPDisplay
                 row.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 row.HeaderCell.Style.Font = new Font("맑은 고딕", 11.0F, FontStyle.Bold);
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
-
                 //if (this.Columns.Contains("No"))
                 //    row.Cells["No"].Value = row.Index.ToString();
                 if (this.Columns.Contains("Chk"))
                     row.Cells["Chk"].Value = false;
                 if (row.Index % 2 == 0)
                     row.DefaultCellStyle.BackColor = Color.AliceBlue;
+
+                row.Height = 60;
             }
         }
 

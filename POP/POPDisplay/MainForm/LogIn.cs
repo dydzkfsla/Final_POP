@@ -31,7 +31,7 @@ namespace POPDisplay.MainForm
         private async void btn_Login_Click(object sender, EventArgs e)
         {
             client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "Employees/" + txt_ID.Text;
+            string UrlApi = Global.Global.APIAddress + "/Employees/" + txt_ID.Text;
             HttpResponseMessage rm = await client.GetAsync(UrlApi);
             if (rm.IsSuccessStatusCode)
             {
@@ -42,7 +42,7 @@ namespace POPDisplay.MainForm
                 if (apiMessage.ResultCode == "S")
                 {
                     Global.Global.employees = apiMessage.Data;
-                    UrlApi = Global.Global.APIAddress + "TeamInfo/Emp/" + txt_ID.Text;
+                    UrlApi = Global.Global.APIAddress + "/TeamInfo/Emp/" + txt_ID.Text;
                     rm = await client.GetAsync(UrlApi);
 
                     if (rm.IsSuccessStatusCode)
