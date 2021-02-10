@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_WorkOrder = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_Stop = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_StartWork = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.btn_ProductCheck = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_WrokOrderForm = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_WorkOrder = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Minmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
@@ -67,9 +67,26 @@
             this.panel1.Size = new System.Drawing.Size(200, 900);
             this.panel1.TabIndex = 1;
             // 
+            // lbl_WorkOrder
+            // 
+            this.lbl_WorkOrder.AutoSize = true;
+            this.lbl_WorkOrder.Location = new System.Drawing.Point(3, 123);
+            this.lbl_WorkOrder.Name = "lbl_WorkOrder";
+            this.lbl_WorkOrder.Size = new System.Drawing.Size(0, 19);
+            this.lbl_WorkOrder.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "선택 작업 코드";
+            // 
             // btn_Stop
             // 
-            this.btn_Stop.Location = new System.Drawing.Point(0, 362);
+            this.btn_Stop.Location = new System.Drawing.Point(0, 372);
             this.btn_Stop.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Stop.Name = "btn_Stop";
             this.btn_Stop.Size = new System.Drawing.Size(200, 76);
@@ -80,7 +97,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 792);
+            this.button2.Location = new System.Drawing.Point(0, 802);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 76);
@@ -90,7 +107,7 @@
             // 
             // btn_StartWork
             // 
-            this.btn_StartWork.Location = new System.Drawing.Point(0, 276);
+            this.btn_StartWork.Location = new System.Drawing.Point(0, 286);
             this.btn_StartWork.Margin = new System.Windows.Forms.Padding(5);
             this.btn_StartWork.Name = "btn_StartWork";
             this.btn_StartWork.Size = new System.Drawing.Size(200, 76);
@@ -101,7 +118,7 @@
             // 
             // btn_
             // 
-            this.btn_.Location = new System.Drawing.Point(0, 534);
+            this.btn_.Location = new System.Drawing.Point(0, 544);
             this.btn_.Margin = new System.Windows.Forms.Padding(5);
             this.btn_.Name = "btn_";
             this.btn_.Size = new System.Drawing.Size(200, 76);
@@ -134,7 +151,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 706);
+            this.button1.Location = new System.Drawing.Point(0, 716);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 76);
@@ -145,7 +162,7 @@
             // 
             // btn_ProductCheck
             // 
-            this.btn_ProductCheck.Location = new System.Drawing.Point(0, 620);
+            this.btn_ProductCheck.Location = new System.Drawing.Point(0, 630);
             this.btn_ProductCheck.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ProductCheck.Name = "btn_ProductCheck";
             this.btn_ProductCheck.Size = new System.Drawing.Size(200, 76);
@@ -156,7 +173,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(0, 448);
+            this.btn_add.Location = new System.Drawing.Point(0, 458);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(200, 76);
@@ -167,7 +184,7 @@
             // 
             // btn_WrokOrderForm
             // 
-            this.btn_WrokOrderForm.Location = new System.Drawing.Point(0, 190);
+            this.btn_WrokOrderForm.Location = new System.Drawing.Point(0, 200);
             this.btn_WrokOrderForm.Margin = new System.Windows.Forms.Padding(5);
             this.btn_WrokOrderForm.Name = "btn_WrokOrderForm";
             this.btn_WrokOrderForm.Size = new System.Drawing.Size(200, 76);
@@ -175,23 +192,6 @@
             this.btn_WrokOrderForm.Text = "작업지시 조회";
             this.btn_WrokOrderForm.UseVisualStyleBackColor = true;
             this.btn_WrokOrderForm.Click += new System.EventHandler(this.btn_WrokOrderForm_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "선택 작업 코드";
-            // 
-            // lbl_WorkOrder
-            // 
-            this.lbl_WorkOrder.AutoSize = true;
-            this.lbl_WorkOrder.Location = new System.Drawing.Point(3, 123);
-            this.lbl_WorkOrder.Name = "lbl_WorkOrder";
-            this.lbl_WorkOrder.Size = new System.Drawing.Size(0, 19);
-            this.lbl_WorkOrder.TabIndex = 11;
             // 
             // MDIForm
             // 

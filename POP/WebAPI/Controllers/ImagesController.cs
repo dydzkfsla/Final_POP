@@ -38,6 +38,7 @@ namespace WebAPI.Controllers
             string pasth = HttpContext.Current.Server.MapPath("~/Images");
             System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(pasth);
             if (!di.Exists) { di.Create(); }
+            System.IO.File.Delete(di.FullName + "/" + data.filename);
 
             image.Save(di.FullName+ "/" + data.filename);
             msg.ResultCode = "S";

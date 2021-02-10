@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\FacilityController.cs" />
     <Compile Include="Controllers\ImagesController.cs" />
     <Compile Include="Controllers\ProcessDetailController.cs" />
     <Compile Include="Controllers\ProductCheckController.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Controllers\WorkOrderController.cs" />
     <Compile Include="Controllers\WorkRecordController.cs" />
     <Compile Include="DAC\EmployeesDAC.cs" />
+    <Compile Include="DAC\FacilityDAC.cs" />
     <Compile Include="DAC\Helper.cs" />
     <Compile Include="DAC\ProcessDetailDAC.cs" />
     <Compile Include="DAC\ProductCheckDAC.cs" />

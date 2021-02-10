@@ -180,9 +180,31 @@ namespace POPDisplay.MDI
 
         }
 
-        private void btn__Click(object sender, EventArgs e)
+        private async void btn__Click(object sender, EventArgs e)
         {
-
+            if (selectdWork == null)
+                return;
+            HttpClient client = new HttpClient();
+            string UrlApi = Global.Global.APIAddress + "/Facility/" + selectdWork.Fac_Code;
+            HttpResponseMessage rm = await client.GetAsync(UrlApi);
+            if (rm.IsSuccessStatusCode)
+            {
+                string result = await rm.Content.ReadAsStringAsync();
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                ApiMessage<FacilityVO> apiMessage = jss.Deserialize<ApiMessage<FacilityVO>>(result);
+                if (apiMessage.ResultCode == "S")
+                {
+                    FacilityInfo facility = new FacilityInfo(apiMessage.Data, selectdWork.WO_EstimatedQuantity);
+                    this.OpenCreateForm(facility, true);
+                    facility.Dock = DockStyle.Fill;
+                }
+                else
+                {
+                    MessageBox.Show("조회된 설비가 없습니다.");
+                }
+            }
+            else
+                MessageBox.Show("조회된 설비가 없습니다.");
         }
 
         private void button1_Click(object sender, EventArgs e)

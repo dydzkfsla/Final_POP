@@ -33,15 +33,15 @@ namespace POPDisplay.ControlUser
             this.pgb_Per = new System.Windows.Forms.ProgressBar();
             this.lbl_Per = new System.Windows.Forms.Label();
             this.lbl_PcsName = new System.Windows.Forms.Label();
-            this.tmr_TactTime = new System.Windows.Forms.Timer(this.components);
             this.pic_PcsImg = new System.Windows.Forms.PictureBox();
+            this.timer_Connect1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_PcsImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pgb_Per
             // 
             this.pgb_Per.Location = new System.Drawing.Point(28, 278);
-            this.pgb_Per.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pgb_Per.Margin = new System.Windows.Forms.Padding(4);
             this.pgb_Per.Name = "pgb_Per";
             this.pgb_Per.Size = new System.Drawing.Size(217, 33);
             this.pgb_Per.TabIndex = 1;
@@ -69,11 +69,6 @@ namespace POPDisplay.ControlUser
             this.lbl_PcsName.Tag = "PcsCode";
             this.lbl_PcsName.Text = "ProcessNameText";
             // 
-            // tmr_TactTime
-            // 
-            this.tmr_TactTime.Interval = 1000;
-            this.tmr_TactTime.Tick += new System.EventHandler(this.tmr_TactTime_Tick);
-            // 
             // pic_PcsImg
             // 
             this.pic_PcsImg.Image = global::POPDisplay.Properties.Resources.ProcessImgSample;
@@ -85,6 +80,11 @@ namespace POPDisplay.ControlUser
             this.pic_PcsImg.TabIndex = 0;
             this.pic_PcsImg.TabStop = false;
             // 
+            // timer_Connect1
+            // 
+            this.timer_Connect1.Interval = 1000;
+            this.timer_Connect1.Tick += new System.EventHandler(this.timer_Connect_Tick);
+            // 
             // ProcessInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -95,7 +95,7 @@ namespace POPDisplay.ControlUser
             this.Controls.Add(this.pgb_Per);
             this.Controls.Add(this.pic_PcsImg);
             this.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProcessInfo";
             this.Size = new System.Drawing.Size(273, 373);
             this.Load += new System.EventHandler(this.ProcessInfo_Load);
@@ -108,9 +108,9 @@ namespace POPDisplay.ControlUser
         #endregion
 
         private System.Windows.Forms.PictureBox pic_PcsImg;
-        private System.Windows.Forms.ProgressBar pgb_Per;
+        public System.Windows.Forms.ProgressBar pgb_Per;
         private System.Windows.Forms.Label lbl_Per;
         private System.Windows.Forms.Label lbl_PcsName;
-        private System.Windows.Forms.Timer tmr_TactTime;
+        private System.Windows.Forms.Timer timer_Connect1;
     }
 }
