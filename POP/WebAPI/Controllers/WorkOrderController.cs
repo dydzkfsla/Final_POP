@@ -60,5 +60,18 @@ namespace WebAPI.Controllers
 
             return Ok(msg);
         }
+
+        [Route("End/{Code}")]
+        public IHttpActionResult GetEndWorkFromCode(string Code)
+        {
+            ApiMessage<bool> msg = new ApiMessage<bool>();
+
+            WorkOrderDAC uDac = new WorkOrderDAC();
+            msg.Data = uDac.EndWorkFromCode(Code);
+            msg.ResultCode = (!msg.Data) ? "F" : "S";
+            msg.ResultMessage = (!msg.Data) ? "해당하는 정보가 없습니다." : "OK";
+
+            return Ok(msg);
+        }
     }
 }

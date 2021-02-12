@@ -87,5 +87,29 @@ namespace WebAPI.DAC
                 return false;
             }
         }
+
+        public bool EndWorkFromCode(string WO_Code)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = new SqlConnection(ConnString.strConn);
+                    cmd.CommandText = @"Update WorkOrder set WO_State = 'Wost006'
+                                        where WO_Code = @WO_Code";
+                    cmd.Parameters.AddWithValue("@WO_Code", WO_Code);
+                    cmd.Connection.Open();
+                    bool result = cmd.ExecuteNonQuery() > 0;
+                    cmd.Connection.Close();
+
+                    return result;
+                }
+            }
+            catch (Exception err)
+            {
+                log.Error("GetAllUsers() 오류: " + err.Message);
+                return false;
+            }
+        }
     }
 }

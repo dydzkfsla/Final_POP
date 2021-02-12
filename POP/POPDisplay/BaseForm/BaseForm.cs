@@ -99,7 +99,6 @@ namespace POPDisplay.BaseForm
                 return cp;
             }
         }
-
         #endregion
 
         private void BaseForm_Load(object sender, EventArgs e)

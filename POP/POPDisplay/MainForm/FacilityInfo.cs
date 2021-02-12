@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -50,8 +51,17 @@ namespace POPDisplay.MainForm
             info.Tag = labels;
             info.WO_EstimatedQuantity = EstimatedQuantity;
             panel1.Controls.Add(info);
+            info.BackColorChanged += Info_BackColorChanged;
             Task_ID = vo.Fac_Code;
             label2.Text = EstimatedQuantity.ToString();
+        }
+
+        private void Info_BackColorChanged(object sender, EventArgs e)
+        {
+            if(info.BackColor == Color.LightPink)
+            {
+                btnStart.Enabled = btnStop.Enabled = button3.Enabled = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +74,18 @@ namespace POPDisplay.MainForm
         {
             info.StopThread();
             IsTaskEnable = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (info.BackColor != Color.LightPink)
+            {
+                if(MessageBox.Show("아직 작업이 끝나지 않았습니다.\n작업을 끝내시겠습니까? ", "작업종료", buttons: MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    info.StopThread();
+                    info.BackColor = Color.LightPink;
+                }
+            }
         }
     }
 }

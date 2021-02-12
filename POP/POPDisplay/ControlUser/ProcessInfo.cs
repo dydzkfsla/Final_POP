@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -30,11 +31,13 @@ namespace POPDisplay.ControlUser
 
         public ThreadPLCTask m_thread;
         int timer_CONNECT = 1000;
-        int timer_KEEP_ALIVE = 1000;
-        int timer_READ_PLC = 1000;
+        int timer_KEEP_ALIVE = 5000;
+        int timer_READ_PLC = 300;
 
         int Count = 0;
 
+        int process_id = 0;
+        Process pro;
         public ProcessInfo(FacilityVO vo)
         {
             InitializeComponent();
@@ -66,6 +69,12 @@ namespace POPDisplay.ControlUser
                 m_thread.ThreadStart();
 
                 timer_Connect1.Start();
+
+
+
+                string server = @"C:\FP\Final_POP\POP\POPDisplay\bin\OutputTcpServer.exe";
+                pro = Process.Start(server, $"{"127.0.0.1"} {"8800"}");
+                process_id = pro.Id;
             }
             catch
             {
@@ -75,10 +84,13 @@ namespace POPDisplay.ControlUser
 
         public void StopThread()
         {
-            m_thread.ThreadStop();
 
+            pro.Kill();
+            m_thread.ThreadStop();
             timer_Connect1.Stop();
-            this.BackColor = Color.White;
+
+            //if (this.BackColor != Color.LightPink)
+            //    this.BackColor = Color.White;
         }
 
         private void M_thread_ReadData(object sender, ReadDataEventArgs args)
@@ -91,8 +103,15 @@ namespace POPDisplay.ControlUser
                 int bad = Convert.ToInt32(vs[1]);
                 Count = good + bad;
                 pgb_Per.Value = pgb_Per.Value + Count > pgb_Per.Maximum  ? pgb_Per.Maximum : pgb_Per.Value + Count;
-                labels[0].Text = (Convert.ToInt32(labels[0].Text) + good).ToString();
-                labels[1].Text = (Convert.ToInt32(labels[1].Text) + bad).ToString();
+                good = Convert.ToInt32(labels[0].Text) + good;
+                bad = Convert.ToInt32(labels[1].Text) + bad;
+                labels[0].Text = good.ToString();
+                labels[1].Text = bad.ToString();
+                if(WO_EstimatedQuantity <= (good + bad))
+                {
+                    StopThread();
+                    this.BackColor = Color.LightPink;
+                }
             }));
             //this.Invoke((MethodInvoker)(() => listBox1.Items.Add($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {args.Data}")));
             //this.Invoke((MethodInvoker)(() => listBox1.SelectedIndex = listBox1.Items.Count - 1));

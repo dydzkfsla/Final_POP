@@ -36,7 +36,7 @@ namespace POPDisplay
         int timer_CONNECT = 1000;
         int timer_KEEP_ALIVE = 5000;
         int timer_READ_PLC = 300;
-        private object obj = new object();
+
         Stopwatch m_AliveTimer = new Stopwatch();
         const string STR_HEART_BEAT = "HeartBeat";
 
@@ -65,8 +65,8 @@ namespace POPDisplay
         public void ThreadStop()
         {
             if (client == null || client.client == null) return;
-            
-            lock (obj)
+
+            lock (m_Thread)
             {
                 client.client.Close();
                 m_ThreadTerminateRequest.Set();

@@ -75,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pcs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 		}
 
         #endregion

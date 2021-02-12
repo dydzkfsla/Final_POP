@@ -68,6 +68,8 @@ namespace POPDisplay.MainForm
 
         private void dgv_WorkOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0)
+                return;
             this.MdiParent.Controls["panel1"].Controls["lbl_WorkOrder"].Text = dgv_WorkOrder["WO_Code", e.RowIndex].Value.ToString();
             ((MDIForm)this.MdiParent).selectdWork = (SP_WorkOrderSherchTeamVO)dgv_WorkOrder.Rows[e.RowIndex].DataBoundItem;
         }

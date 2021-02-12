@@ -209,6 +209,11 @@ namespace POPDisplay.MDI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(selectdWork == null)
+            {
+                MessageBox.Show("작업을 선택해 주세요.");
+                return;
+            }
             WorkRecordPopUp workRecordPopUp = new WorkRecordPopUp(selectdWork.WO_Code);
             workRecordPopUp.ShowDialog();
         }
@@ -216,5 +221,36 @@ namespace POPDisplay.MDI
 
 
         #endregion
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            if (!SetSelectOrder())
+                return;
+            if(MessageBox.Show("선택한 작업을 끝내시겠습니까?", "작업종료", buttons: MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            HttpClient client = new HttpClient();
+            string UrlApi = Global.Global.APIAddress + "/WorkOrder/End/" + selectdWork.WO_Code;
+            HttpResponseMessage rm = await client.GetAsync(UrlApi);
+            if (rm.IsSuccessStatusCode)
+            {
+                string result = await rm.Content.ReadAsStringAsync();
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                ApiMessage<bool> apiMessage = jss.Deserialize<ApiMessage<bool>>(result);
+                if (apiMessage.ResultCode == "S")
+                {
+                    ((List<SP_WorkOrderSherchTeamVO>)workOrder.dgv_WorkOrder.DataSource).Remove(selectdWork);
+                    selectdWork = null;
+                    lbl_WorkOrder.Text = null;
+                    DataSourceRebainding();
+                }
+                else
+                {
+                    MessageBox.Show("검색된 작업 지시 사항이 없습니다.");
+                }
+            }
+        }
     }
 }
