@@ -207,6 +207,7 @@
             this.Name = "MDIForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MDIForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MDIForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

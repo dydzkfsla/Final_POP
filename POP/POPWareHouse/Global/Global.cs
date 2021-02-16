@@ -11,7 +11,7 @@ namespace POPWareHouse.Global
     public static class Global
     {
         public static string APIAddress = ConfigurationManager.AppSettings["APIAddress"];
-        public static EmployeesVO employees; 
-        public static List<TeamInfoVO> TeamInfos;
+        public static EmployeesVO employees;
+        public static ViewWareHouseVO WareHouse;
     }
 }

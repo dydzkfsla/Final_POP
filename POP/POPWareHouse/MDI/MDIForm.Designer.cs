@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_WorkOrder = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_SelectOrke = new System.Windows.Forms.Label();
+            this.lbl_WHName = new System.Windows.Forms.Label();
+            this.btn_WareHouseIn = new System.Windows.Forms.Button();
             this.pcb_Minmax = new System.Windows.Forms.PictureBox();
             this.pcb_Close = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Minmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
@@ -40,8 +43,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lbl_WorkOrder);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lbl_SelectOrke);
+            this.panel1.Controls.Add(this.lbl_WHName);
+            this.panel1.Controls.Add(this.btn_WareHouseIn);
             this.panel1.Controls.Add(this.pcb_Minmax);
             this.panel1.Controls.Add(this.pcb_Close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -51,22 +57,42 @@
             this.panel1.Size = new System.Drawing.Size(200, 900);
             this.panel1.TabIndex = 1;
             // 
-            // lbl_WorkOrder
+            // button1
             // 
-            this.lbl_WorkOrder.AutoSize = true;
-            this.lbl_WorkOrder.Location = new System.Drawing.Point(3, 123);
-            this.lbl_WorkOrder.Name = "lbl_WorkOrder";
-            this.lbl_WorkOrder.Size = new System.Drawing.Size(0, 19);
-            this.lbl_WorkOrder.TabIndex = 11;
+            this.button1.Location = new System.Drawing.Point(0, 279);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 61);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "발주 목록 확인";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // lbl_SelectOrke
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "선택 작업 코드";
+            this.lbl_SelectOrke.AutoSize = true;
+            this.lbl_SelectOrke.Location = new System.Drawing.Point(3, 104);
+            this.lbl_SelectOrke.Name = "lbl_SelectOrke";
+            this.lbl_SelectOrke.Size = new System.Drawing.Size(0, 19);
+            this.lbl_SelectOrke.TabIndex = 15;
+            // 
+            // lbl_WHName
+            // 
+            this.lbl_WHName.AutoSize = true;
+            this.lbl_WHName.Location = new System.Drawing.Point(3, 80);
+            this.lbl_WHName.Name = "lbl_WHName";
+            this.lbl_WHName.Size = new System.Drawing.Size(107, 19);
+            this.lbl_WHName.TabIndex = 14;
+            this.lbl_WHName.Text = "선택 발주 코드";
+            // 
+            // btn_WareHouseIn
+            // 
+            this.btn_WareHouseIn.Location = new System.Drawing.Point(0, 164);
+            this.btn_WareHouseIn.Name = "btn_WareHouseIn";
+            this.btn_WareHouseIn.Size = new System.Drawing.Size(200, 61);
+            this.btn_WareHouseIn.TabIndex = 12;
+            this.btn_WareHouseIn.Text = "재고 목록 확인";
+            this.btn_WareHouseIn.UseVisualStyleBackColor = true;
+            this.btn_WareHouseIn.Click += new System.EventHandler(this.btn_WareHouseIn_Click);
             // 
             // pcb_Minmax
             // 
@@ -90,6 +116,16 @@
             this.pcb_Close.TabStop = false;
             this.pcb_Close.Click += new System.EventHandler(this.pcb_Close_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 389);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 61);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "발주 처리 및 바코드 출력";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MDIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -103,7 +139,9 @@
             this.Name = "MDIForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MDIForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MDIForm_FormClosing);
+            this.Load += new System.EventHandler(this.MDIForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Minmax)).EndInit();
@@ -117,7 +155,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcb_Minmax;
         private System.Windows.Forms.PictureBox pcb_Close;
-        private System.Windows.Forms.Label lbl_WorkOrder;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_WareHouseIn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_SelectOrke;
+        private System.Windows.Forms.Label lbl_WHName;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace POPWareHouse
 {
-    partial class Form1
+    partial class CustomDataGridView
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form 디자이너에서 생성한 코드
+        #region 구성 요소 디자이너에서 생성한 코드
 
         /// <summary>
         /// 디자이너 지원에 필요한 메서드입니다. 
@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // CustomDataGridView
+            // 
+            this.RowTemplate.Height = 23;
+            this.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomDataGridView_CellContentClick);
+            this.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.CustomDataGridView_CellPainting);
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

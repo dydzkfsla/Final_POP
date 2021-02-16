@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace POPDisplay
+namespace POPWareHouse
 {
     /// <summary>
     /// TcpClient 연결및 송수신을 담당하는 클래스 (별도의 쓰레드로 작동할 예정)
