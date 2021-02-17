@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POPDisplay.MDI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,6 +62,11 @@ namespace POPDisplay.MainForm
 
         private async void btn_Add_Click(object sender, EventArgs e)
         {
+            int count = Convert.ToInt32(tbx_BadQuantity.Text);
+            if(this.MdiParent != null)
+            {
+                ((MDIForm)this.MdiParent).Count = count;
+            }
             HttpClient client = new HttpClient();
             string UrlApi = Global.Global.APIAddress + "/WorkRecord/WorkQuantity/" + WorkCode+"/" + tbx_BadQuantity.Text + "/" + tbx_GoodsQuantity.Text + "/" + Global.Global.employees.Emp_Code;
 

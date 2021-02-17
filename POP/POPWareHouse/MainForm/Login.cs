@@ -63,7 +63,10 @@ namespace POPWareHouse.MainForm
 
         private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
         {
-            pro.Kill();
+            if (!pro.HasExited)
+            {
+                pro.Kill();
+            }
         }
 
         private void textBox1_DoubleClick(object sender, EventArgs e)

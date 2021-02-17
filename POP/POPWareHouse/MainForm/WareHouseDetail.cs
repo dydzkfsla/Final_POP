@@ -20,7 +20,7 @@ namespace POPWareHouse.MainForm
             this.data = data;
         }
 
-        private async void WareHouseDetail_Load(object sender, EventArgs e)
+        private void WareHouseDetail_Load(object sender, EventArgs e)
         {
             dgv_WareHouseDetail.SetGridColumn();
             CommonUtil.AddGridTextColumn(dgv_WareHouseDetail, "물품 코드", "Prod_Code", 150);

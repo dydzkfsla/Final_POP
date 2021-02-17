@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POPWPF", "POPWPF\POPWPF.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POPWareHouse", "POPWareHouse\POPWareHouse.csproj", "{C905BF3A-FD21-4D45-A373-2482905CBA26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barcode", "Barcode\Barcode.csproj", "{6C819F22-E09F-4E2B-8D5F-957AE7A56D90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C905BF3A-FD21-4D45-A373-2482905CBA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C905BF3A-FD21-4D45-A373-2482905CBA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C905BF3A-FD21-4D45-A373-2482905CBA26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C819F22-E09F-4E2B-8D5F-957AE7A56D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C819F22-E09F-4E2B-8D5F-957AE7A56D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C819F22-E09F-4E2B-8D5F-957AE7A56D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C819F22-E09F-4E2B-8D5F-957AE7A56D90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -24,5 +24,18 @@ namespace WebAPI.Controllers
 
             return Ok(msg);
         }
+
+        [Route("Count/{Count}")]
+        public IHttpActionResult GetSP_InsetProductWH(int Count)
+        {
+            ApiMessage<bool> msg = new ApiMessage<bool>();
+
+            ViewDAC uDac = new ViewDAC();
+            msg.Data = uDac.SP_InsetProductWH(Count);
+            msg.ResultCode = (msg.Data == false) ? "F" : "S";
+            msg.ResultMessage = (msg.Data == false) ? "해당하는 정보가 없습니다." : "OK";
+
+            return Ok(msg);
+        }
     }
 }

@@ -61,9 +61,7 @@ namespace POPDisplay.MainForm
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "작업시간", "WO_WorkTimeName");
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "지시수량", "WO_EstimatedQuantity");
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "목표수량", "WO_OrderQuantity");
-            CommonUtil.AddGridTextColumn(dgv_WorkOrder, "개당 생산 시간", "WO_TactTime");
             CommonUtil.AddGridTextColumn(dgv_WorkOrder, "목표시간", "WO_EstimatedEnd", 200 , Format: "yyyy-MM-dd");
-            CommonUtil.AddGridTextColumn(dgv_WorkOrder, "우선순위", "WO_Priority");
         }
 
         private void dgv_WorkOrder_CellClick(object sender, DataGridViewCellEventArgs e)
