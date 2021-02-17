@@ -85,7 +85,10 @@ namespace POPDisplay.ControlUser
         public void StopThread()
         {
 
-            pro.Kill();
+            if(!pro.HasExited)
+            {
+                pro.Kill();
+            }
             m_thread.ThreadStop();
             timer_Connect1.Stop();
 
