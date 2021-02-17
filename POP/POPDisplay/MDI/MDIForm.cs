@@ -230,14 +230,31 @@ namespace POPDisplay.MDI
         {
             if (!SetSelectOrder())
                 return;
-            if(MessageBox.Show("선택한 작업을 끝내시겠습니까?", "작업종료", buttons: MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("선택한 작업을 끝내시겠습니까?", "작업종료", buttons: MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
             }
 
             HttpClient client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "/WorkOrder/End/" + selectdWork.WO_Code;
-            HttpResponseMessage rm = await client.GetAsync(UrlApi);
+            string UrlApi;
+            HttpResponseMessage rm;
+            if (selectdWork.Fac_Code == "Fac0602")
+            {
+                UrlApi = Global.Global.APIAddress + "/ProductCheck/Count/" + Count;
+                rm = await client.GetAsync(UrlApi);
+                if (rm.IsSuccessStatusCode)
+                {
+                    string result = await rm.Content.ReadAsStringAsync();
+                    JavaScriptSerializer jss = new JavaScriptSerializer();
+                    ApiMessage<bool> apiMessage = jss.Deserialize<ApiMessage<bool>>(result);
+                    if (apiMessage.ResultCode == "S")
+                    {
+
+                    }
+                }
+            }
+            UrlApi = Global.Global.APIAddress + "/WorkOrder/End/" + selectdWork.WO_Code;
+            rm = await client.GetAsync(UrlApi);
             if (rm.IsSuccessStatusCode)
             {
                 string result = await rm.Content.ReadAsStringAsync();
@@ -253,22 +270,6 @@ namespace POPDisplay.MDI
                 else
                 {
                     MessageBox.Show("검색된 작업 지시 사항이 없습니다.");
-                }
-            }
-
-            if(selectdWork.Fac_Code == "Fac0602")
-            {
-                UrlApi = Global.Global.APIAddress + "/ProductCheck/Count/" + Count;
-                rm = await client.GetAsync(UrlApi);
-                if (rm.IsSuccessStatusCode)
-                {
-                    string result = await rm.Content.ReadAsStringAsync();
-                    JavaScriptSerializer jss = new JavaScriptSerializer();
-                    ApiMessage<bool> apiMessage = jss.Deserialize<ApiMessage<bool>>(result);
-                    if (apiMessage.ResultCode == "S")
-                    {
-
-                    }
                 }
             }
         }

@@ -100,7 +100,7 @@ namespace POPWareHouse.MDI
                 if (apiMessage.ResultCode == "S")
                 {
                     count = 0;
-                    apiMessage.Data.ForEach(x => count += x.Contract_Count - x.Contract_ShippingCount - x.Contract_CancelCount);
+                    apiMessage.Data.ForEach(x => count += x.Contract_ShippingCount);
                 }
             }
             if (count == 0)
