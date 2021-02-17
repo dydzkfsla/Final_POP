@@ -96,8 +96,11 @@ namespace WebAPI.DAC
                 {
                     cmd.Connection = new SqlConnection(ConnString.strConn);
                     cmd.CommandText = @"Update WorkOrder set WO_State = 'Wost006'
-                                        where WO_Code = @WO_Code";
+                                        where WO_Code = @WO_Code
+                                        Update WorkRecord set Work_EndDate = getdate()
+                                        where WorkPlan_Code = @WorkPlan_Code";
                     cmd.Parameters.AddWithValue("@WO_Code", WO_Code);
+                    cmd.Parameters.AddWithValue("@WorkPlan_Code", WO_Code);
                     cmd.Connection.Open();
                     bool result = cmd.ExecuteNonQuery() > 0;
                     cmd.Connection.Close();

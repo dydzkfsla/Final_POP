@@ -42,6 +42,8 @@ namespace POPDisplay.ControlUser
         {
             InitializeComponent();
             this.vo = vo;
+            lbl_PcsName.Text = vo.Fac_Code;
+            lbl_Per.Text = vo.Fac_Name;
         }
 
         private void ProcessInfo_Load(object sender, EventArgs e)
@@ -84,8 +86,10 @@ namespace POPDisplay.ControlUser
 
         public void StopThread()
         {
-
-            pro.Kill();
+            if (!pro.HasExited)
+            {
+                pro.Kill();
+            }
             m_thread.ThreadStop();
             timer_Connect1.Stop();
 

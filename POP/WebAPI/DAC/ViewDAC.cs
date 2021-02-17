@@ -91,6 +91,30 @@ namespace WebAPI.DAC
             }
         }
 
+        public bool SP_InsetProductWH(int Count)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = new SqlConnection(ConnString.strConn);
+                    cmd.CommandText = @"SP_InsetProductWH";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Count", Count);
+                    cmd.Connection.Open();
+                    bool result = cmd.ExecuteNonQuery() > 0 ? true : false;
+                    cmd.Connection.Close();
+
+                    return result;
+                }
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                return false;
+            }
+        }
+
         public List<View_ContractVO> GetCodeView_Orders_CodeVO(string code)
         {
             try
@@ -141,6 +165,38 @@ namespace WebAPI.DAC
             {
                 Debug.WriteLine(err.Message);
                 return null;
+            }
+        }
+
+        public bool SP_OutToProduct(decimal Count, string ProductCode, string WH_Code, string uid, string Contract_Code)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    string sql = @"SP_OutToProduct";
+
+                    cmd.CommandText = sql;
+                    cmd.Connection = new SqlConnection(ConnString.strConn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Count", Count);
+                    cmd.Parameters.AddWithValue("@ProductCode", ProductCode);
+                    cmd.Parameters.AddWithValue("@WH_Code", WH_Code);
+                    cmd.Parameters.AddWithValue("@uid", uid);
+                    cmd.Parameters.AddWithValue("@Contract_Code", Contract_Code);
+
+                    cmd.Connection.Open();
+                    bool result = cmd.ExecuteNonQuery() > 0 ? true: false;
+                    cmd.Connection.Close();
+
+
+                    return result;
+                }
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                return false;
             }
         }
     }

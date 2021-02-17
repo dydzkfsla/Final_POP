@@ -48,6 +48,7 @@ namespace POPWareHouse.MDI
 
         private void btn_WareHouseIn_Click(object sender, EventArgs e)
         {
+            ChileFromClose();
             WareHouseDetail open = new WareHouseDetail(WareHouseDetail);
             this.OpenCreateForm(open, true);
             open.Dock = DockStyle.Fill;
@@ -73,6 +74,7 @@ namespace POPWareHouse.MDI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ChileFromClose();
             OrdersForm open = new OrdersForm();
             this.OpenCreateForm(open, true);
             open.Dock = DockStyle.Fill;
@@ -80,11 +82,36 @@ namespace POPWareHouse.MDI
 
         private async void button2_Click(object sender, EventArgs e)
         {
+            ChileFromClose();
             if (selectVo == null)
                 return;
+
             HttpClient client = new HttpClient();
-            string UrlApi = Global.Global.APIAddress + "/Orders/GetOrder/Code/" + selectVo.Contract_Code.ToString();
-            HttpResponseMessage rm = await client.GetAsync(UrlApi);
+
+            string  UrlApi = Global.Global.APIAddress + "/Orders/GetOrderDetail/" + selectVo.Contract_Code.ToString();
+            HttpResponseMessage  rm = await client.GetAsync(UrlApi);
+            int count = 0;
+            if (rm.IsSuccessStatusCode)
+            {
+                string result = await rm.Content.ReadAsStringAsync();
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                ApiMessage<List<View_ContractDetailVO>> apiMessage = jss.Deserialize<ApiMessage<List<View_ContractDetailVO>>>(result);
+
+                if (apiMessage.ResultCode == "S")
+                {
+                    count = 0;
+                    apiMessage.Data.ForEach(x => count += x.Contract_Count - x.Contract_ShippingCount - x.Contract_CancelCount);
+                }
+            }
+            if (count == 0)
+                return;
+
+            var vo =  WareHouseDetail.Find(x => x.Prod_Code == "003_001");
+            if (Convert.ToInt32(vo.WH_PsyCount) < count)
+                return;
+
+            UrlApi = Global.Global.APIAddress + "/Orders/GetOrder/Code/" + selectVo.Contract_Code.ToString();
+            rm = await client.GetAsync(UrlApi);
 
             if (rm.IsSuccessStatusCode)
             {
@@ -105,6 +132,30 @@ namespace POPWareHouse.MDI
             }
 
            
+
+            UrlApi = Global.Global.APIAddress + "/Orders/OutToProduct/" + count.ToString() + "/003_001/" + WareHouseDetail[0].WH_Code + "/" + Global.Global.employees.Emp_Code + "/" + selectVo.Contract_Code;
+            rm = await client.GetAsync(UrlApi);
+
+            if (rm.IsSuccessStatusCode)
+            {
+                string result = await rm.Content.ReadAsStringAsync();
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                ApiMessage<bool> apiMessage = jss.Deserialize<ApiMessage<bool>>(result);
+
+                if (apiMessage.Data)
+                {
+                    vo.WH_PsyCount = vo.WH_PsyCount - Convert.ToDecimal(count);
+                }
+            }
+
+        }
+
+        private void ChileFromClose()
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
         }
     }
 }
