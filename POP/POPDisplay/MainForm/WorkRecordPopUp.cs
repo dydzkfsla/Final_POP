@@ -62,10 +62,10 @@ namespace POPDisplay.MainForm
 
         private async void btn_Add_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(tbx_BadQuantity.Text);
-            if(this.MdiParent != null)
+            int count = Convert.ToInt32(tbx_GoodsQuantity.Text);
+            if((this.Owner) != null)
             {
-                ((MDIForm)this.MdiParent).Count = count;
+                ((MDIForm)this.Owner).Count = count;
             }
             HttpClient client = new HttpClient();
             string UrlApi = Global.Global.APIAddress + "/WorkRecord/WorkQuantity/" + WorkCode+"/" + tbx_BadQuantity.Text + "/" + tbx_GoodsQuantity.Text + "/" + Global.Global.employees.Emp_Code;
