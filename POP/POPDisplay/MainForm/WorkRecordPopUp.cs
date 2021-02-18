@@ -62,7 +62,7 @@ namespace POPDisplay.MainForm
 
         private async void btn_Add_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(tbx_BadQuantity.Text);
+            int count = Convert.ToInt32(tbx_GoodsQuantity.Text);
             if(this.MdiParent != null)
             {
                 ((MDIForm)this.MdiParent).Count = count;
