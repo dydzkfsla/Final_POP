@@ -229,7 +229,7 @@ namespace POPDisplay.MDI
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            if (!SetSelectOrder())
+            if (selectdWork == null)
                 return;
             if(MessageBox.Show("선택한 작업을 끝내시겠습니까?", "작업종료", buttons: MessageBoxButtons.YesNo) == DialogResult.No)
             {

@@ -51,6 +51,7 @@ namespace POPWareHouse.MainForm
             // 
             this.textBox1.Font = new System.Drawing.Font("나눔고딕", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(114, 347);
+            this.textBox1.MaxLength = 7;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(353, 41);
             this.textBox1.TabIndex = 1;

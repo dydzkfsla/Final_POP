@@ -45,8 +45,8 @@
             // 
             // lbl_Title
             // 
-            this.lbl_Title.Size = new System.Drawing.Size(155, 31);
-            this.lbl_Title.Text = "SearchBase";
+            this.lbl_Title.Size = new System.Drawing.Size(122, 31);
+            this.lbl_Title.Text = "설비 정보";
             // 
             // pnl_All
             // 

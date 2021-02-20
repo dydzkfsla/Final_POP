@@ -103,7 +103,7 @@ namespace POPWareHouse.BaseForm
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            lbl_Title.Text = this.Text;
+            //lbl_Title.Text = this.Text;
         }
     }
 }

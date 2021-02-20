@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_pck = new POPDisplay.CustomDataGridView();
             this.pnl_All.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pck)).BeginInit();
@@ -36,8 +36,8 @@
             // 
             // lbl_Title
             // 
-            this.lbl_Title.Size = new System.Drawing.Size(155, 31);
-            this.lbl_Title.Text = "SearchBase";
+            this.lbl_Title.Size = new System.Drawing.Size(180, 31);
+            this.lbl_Title.Text = "품목 검사 기준";
             // 
             // pnl_All
             // 
@@ -47,14 +47,14 @@
             // 
             this.dgv_pck.BackgroundColor = System.Drawing.Color.White;
             this.dgv_pck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_pck.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_pck.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_pck.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_pck.GridColor = System.Drawing.Color.Black;
             this.dgv_pck.IsChkVisible = false;

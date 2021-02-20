@@ -44,8 +44,8 @@
             // 
             // lbl_Title
             // 
-            this.lbl_Title.Size = new System.Drawing.Size(155, 31);
-            this.lbl_Title.Text = "SearchBase";
+            this.lbl_Title.Size = new System.Drawing.Size(122, 31);
+            this.lbl_Title.Text = "배송 목록";
             // 
             // pnl_All
             // 
@@ -113,11 +113,11 @@
             this.dgv_OrderDetail.Size = new System.Drawing.Size(705, 828);
             this.dgv_OrderDetail.TabIndex = 0;
             // 
-            // Orders
+            // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.ClientSize = new System.Drawing.Size(1300, 900);
-            this.Name = "Orders";
+            this.Name = "OrdersForm";
             this.Load += new System.EventHandler(this.Orders_Load);
             this.pnl_All.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
